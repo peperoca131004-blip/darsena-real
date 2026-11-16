@@ -2,213 +2,126 @@
 <html lang="es">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<meta name="theme-color" content="#0b0b10">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Dársena Real · Disponibilidad</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <style>
   :root {
-    color-scheme: dark;
-    --bg: #0b0b10; --card: #16161d; --card-2: #1f1f28; --ink: #ffffff; --muted: #8e8e9a; --line: #262631;
-    --accent: #4f7cff; --accent-2: #8b5cf6; --ok: #2ed37f; --bad: #ff5a6a; --chip: #23232d;
-    --grad: linear-gradient(140deg, #2747ff 0%, #6a3cf0 52%, #c2389e 100%);
+    --bg: #f6f5f2; --card: #ffffff; --ink: #1d1f22; --muted: #6b6f76; --line: #e5e3de;
+    --accent: #e0701c; --ok: #2f8f5b; --ok-soft: #e3f3ea; --sold: #c9ccd1; --warn: #b3261e;
   }
-  @media (prefers-color-scheme: light) {
-    :root { color-scheme: light; --bg: #f2f3f7; --card: #ffffff; --card-2: #f4f5f9; --ink: #0d0e14; --muted: #6c6e7a;
-            --line: #e7e8ee; --accent: #2a5bff; --ok: #12a35a; --bad: #e23b4b; --chip: #e9eaf0; }
+  @media (prefers-color-scheme: dark) {
+    :root { color-scheme: dark; --bg: #151618; --card: #1f2124; --ink: #ececec; --muted: #9a9ea6; --line: #33363b;
+            --accent: #f08a3c; --ok: #4cc387; --ok-soft: #1d3328; --sold: #464a50; --warn: #f28b82; }
   }
   * { box-sizing: border-box; }
-  html { scroll-behavior: smooth; }
-  body { margin: 0; background: var(--bg); color: var(--ink); -webkit-font-smoothing: antialiased;
-         font: 15px/1.45 Inter, system-ui, -apple-system, "Segoe UI", Roboto, sans-serif; }
-  a { color: var(--accent); text-decoration: none; }
-  .wrap { max-width: 760px; margin: 0 auto; padding: 16px 16px 56px; }
+  body { margin: 0; background: var(--bg); color: var(--ink);
+         font: 15px/1.45 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif; }
+  .wrap { max-width: 1120px; margin: 0 auto; padding: 24px 16px 48px; }
+  header { display: flex; flex-wrap: wrap; gap: 12px 24px; align-items: flex-end; justify-content: space-between; margin-bottom: 20px; }
+  .hero { margin: 0 0 20px; position: relative; border-radius: 14px; overflow: hidden; border: 1px solid var(--line); }
+  .hero img { display: block; width: 100%; aspect-ratio: 16 / 6; object-fit: cover; object-position: center 18%; }
+  .hero figcaption { position: absolute; left: 12px; bottom: 10px; font-size: 12px; color: #fff;
+                     background: rgba(0,0,0,.45); padding: 3px 10px; border-radius: 99px; }
+  .marca { display: flex; align-items: center; gap: 18px; flex-wrap: wrap; }
+  .logo { display: inline-flex; background: #fff; border-radius: 10px; padding: 6px 10px; border: 1px solid var(--line); }
+  .logo img { height: 40px; width: auto; display: block; }
+  h1 { margin: 0; font-size: 26px; letter-spacing: -0.01em; }
+  h1 small { display: block; font-size: 13px; font-weight: 500; color: var(--muted); letter-spacing: 0; }
+  h2 { font-size: 16px; margin: 32px 0 12px; }
+  a { color: var(--accent); }
+  .meta { color: var(--muted); font-size: 13px; text-align: right; }
+  button { font: inherit; border: 1px solid var(--line); background: var(--card); color: var(--ink);
+           border-radius: 8px; padding: 7px 14px; cursor: pointer; }
+  button:hover { border-color: var(--accent); }
+  button:disabled { opacity: .6; cursor: wait; }
+  .err { background: #fdecea; color: var(--warn); border-radius: 8px; padding: 10px 14px; margin-bottom: 16px; display: none; }
+  @media (prefers-color-scheme: dark) { .err { background: #3a1f1d; } }
 
-  /* Barra superior */
-  .top { display: flex; align-items: center; justify-content: space-between; gap: 12px; padding: 4px 0 16px; }
-  .yo { display: flex; align-items: center; gap: 10px; font-weight: 700; font-size: 17px; }
-  .avatar { width: 38px; height: 38px; border-radius: 50%; background: var(--grad); display: grid; place-items: center;
-            font-size: 13px; font-weight: 800; color: #fff; letter-spacing: .02em; }
-  .pill { display: inline-flex; align-items: center; gap: 6px; background: var(--chip); color: var(--ink);
-          border-radius: 99px; padding: 7px 12px; font-size: 13px; font-weight: 500; white-space: nowrap; }
-  .pill .dot { width: 7px; height: 7px; border-radius: 50%; background: var(--ok); box-shadow: 0 0 0 3px color-mix(in srgb, var(--ok) 25%, transparent); }
+  .kpis { display: grid; grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); gap: 12px; }
+  .kpi { background: var(--card); border: 1px solid var(--line); border-radius: 12px; padding: 14px 16px; }
+  .kpi .v { font-size: 30px; font-weight: 700; font-variant-numeric: tabular-nums; }
+  .kpi .l { color: var(--muted); font-size: 13px; }
+  .kpi.hi .v { color: var(--ok); }
 
-  /* Tarjeta principal tipo "saldo" */
-  .hero { position: relative; border-radius: 28px; overflow: hidden; color: #fff; padding: 28px 20px 22px; text-align: center;
-          background: var(--grad); isolation: isolate; }
-  .hero::before { content: ""; position: absolute; inset: 0; z-index: -1; background: url(foto.jpg) center 18% / cover;
-                  opacity: .28; mix-blend-mode: luminosity; }
-  .hero::after { content: ""; position: absolute; inset: 0; z-index: -1;
-                 background: radial-gradient(120% 80% at 50% 0%, transparent 30%, rgba(10,10,30,.55) 100%); }
-  .hero .lbl { font-size: 14px; font-weight: 500; opacity: .85; }
-  .hero .big { font-size: clamp(64px, 18vw, 96px); font-weight: 800; letter-spacing: -0.045em; line-height: 1;
-               margin: 6px 0 8px; font-variant-numeric: tabular-nums; }
-  .hero .big small { font-size: .32em; font-weight: 600; letter-spacing: -0.01em; opacity: .7; margin-left: 4px; }
-  .hero .sub { font-size: 14px; opacity: .85; }
-  .hero .cred { position: absolute; right: 14px; bottom: 10px; font-size: 10.5px; opacity: .6; }
-  .meter { height: 6px; background: rgba(255,255,255,.22); border-radius: 99px; overflow: hidden; margin: 18px auto 0; max-width: 320px; }
-  .meter span { display: block; height: 100%; background: #fff; border-radius: 99px; }
+  .fases { display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 12px; }
+  .fase { background: var(--card); border: 1px solid var(--line); border-radius: 12px; padding: 16px; }
+  .fase .top { display: flex; justify-content: space-between; align-items: baseline; gap: 8px; }
+  .fase .nom { font-weight: 650; font-size: 17px; }
+  .fase .num { font-variant-numeric: tabular-nums; color: var(--muted); }
+  .fase .num b { color: var(--ok); font-size: 22px; }
+  .fase.agotada .num b { color: var(--muted); }
+  .bar { height: 10px; border-radius: 99px; background: var(--sold); overflow: hidden; margin: 10px 0 6px; }
+  .bar > span { display: block; height: 100%; background: var(--ok); border-radius: 99px; }
+  .sub { font-size: 13px; color: var(--muted); }
+  .tag { display: inline-block; font-size: 12px; padding: 1px 8px; border-radius: 99px; background: var(--sold); color: var(--ink); }
+  .tag.ok { background: var(--ok-soft); color: var(--ok); }
+  details { margin-top: 10px; }
+  summary { cursor: pointer; font-size: 13px; color: var(--accent); }
+  table { width: 100%; border-collapse: collapse; font-size: 13px; margin-top: 8px; }
+  th, td { text-align: left; padding: 6px 4px; border-bottom: 1px solid var(--line); white-space: nowrap; }
+  th { color: var(--muted); font-weight: 500; }
+  td.n, th.n { text-align: right; font-variant-numeric: tabular-nums; }
+  .tbl-scroll { overflow-x: auto; }
 
-  /* Accesos rápidos */
-  .acciones { display: grid; grid-template-columns: repeat(4, 1fr); gap: 8px; margin: 20px 0 8px; }
-  .accion { display: flex; flex-direction: column; align-items: center; gap: 7px; color: var(--ink); font-size: 12.5px; font-weight: 500; }
-  .accion .ic { width: 52px; height: 52px; border-radius: 50%; background: var(--card-2); display: grid; place-items: center;
-                transition: transform .15s, background .15s; }
-  .accion:hover .ic { transform: translateY(-2px); background: var(--chip); }
-  .accion svg { width: 22px; height: 22px; stroke: var(--ink); fill: none; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
-
-  /* Tarjetas y secciones */
-  h2 { font-size: 20px; font-weight: 700; letter-spacing: -0.02em; margin: 30px 4px 12px; display: flex; justify-content: space-between; align-items: baseline; }
-  h2 span { font-size: 13px; font-weight: 500; color: var(--muted); letter-spacing: 0; }
-  .card { background: var(--card); border-radius: 24px; padding: 6px 0; }
-  .card.pad { padding: 18px; }
-  .stats { display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; margin-top: 12px; }
-  .stat { background: var(--card); border-radius: 20px; padding: 14px 16px; }
-  .stat .v { font-size: 22px; font-weight: 700; letter-spacing: -0.02em; font-variant-numeric: tabular-nums; }
-  .stat .l { font-size: 12.5px; color: var(--muted); }
-
-  /* Filas tipo "cuenta" */
-  details.fila { border-bottom: 1px solid var(--line); }
-  details.fila:last-child { border-bottom: 0; }
-  details.fila > summary { list-style: none; cursor: pointer; display: flex; align-items: center; gap: 14px; padding: 14px 18px; }
-  details.fila > summary::-webkit-details-marker { display: none; }
-  details.fila[open] > summary { background: var(--card-2); }
-  .ini { flex: none; width: 44px; height: 44px; border-radius: 50%; display: grid; place-items: center; font-weight: 700; font-size: 14px; color: #fff; }
-  .info { flex: 1; min-width: 0; }
-  .info .n { font-weight: 600; font-size: 15.5px; }
-  .info .s { font-size: 13px; color: var(--muted); }
-  .prog { height: 4px; background: var(--chip); border-radius: 99px; overflow: hidden; margin-top: 7px; max-width: 220px; }
-  .prog span { display: block; height: 100%; border-radius: 99px; }
-  .der { text-align: right; flex: none; }
-  .der .v { font-size: 20px; font-weight: 700; letter-spacing: -0.02em; font-variant-numeric: tabular-nums; }
-  .der .s { font-size: 12px; color: var(--muted); }
-  .agotada .ini { filter: grayscale(1); opacity: .5; }
-  .agotada .der .v { color: var(--muted); }
-  .badge { display: inline-block; font-size: 11.5px; font-weight: 600; padding: 2px 8px; border-radius: 99px; background: var(--chip); color: var(--muted); }
-
-  .viviendas { padding: 4px 18px 14px 76px; background: var(--card-2); }
-  .viv { display: flex; align-items: center; gap: 12px; padding: 10px 0; border-top: 1px solid var(--line); font-size: 14px; }
-  .viv:first-child { border-top: 0; }
-  .viv .info .n { font-size: 14.5px; }
-  .viv .links { display: flex; gap: 6px; }
-  .viv .links a { font-size: 12.5px; font-weight: 600; background: var(--chip); color: var(--ink); padding: 5px 10px; border-radius: 99px; }
-  .viv .links a:hover { background: var(--accent); color: #fff; }
-
-  /* Gráfico */
-  .chips { display: flex; gap: 8px; overflow-x: auto; padding: 2px 0 14px; scrollbar-width: none; }
-  .chips::-webkit-scrollbar { display: none; }
-  .chip { flex: none; font: inherit; font-size: 13px; font-weight: 600; border: 0; border-radius: 99px; padding: 8px 14px;
-          background: var(--chip); color: var(--ink); cursor: pointer; }
-  .chip.on { background: var(--ink); color: var(--bg); }
-  .valor { font-size: 34px; font-weight: 800; letter-spacing: -0.035em; font-variant-numeric: tabular-nums; }
-  .valor small { font-size: 14px; font-weight: 500; color: var(--muted); letter-spacing: 0; margin-left: 6px; }
-  .chart svg { width: 100%; height: auto; display: block; margin-top: 8px; }
-  .ejes { display: flex; justify-content: space-between; font-size: 12px; color: var(--muted); margin-top: 6px; }
-  .yo { white-space: nowrap; }
-
-  /* Movimientos */
-  .dia { font-size: 13px; font-weight: 600; color: var(--muted); padding: 14px 18px 4px; }
-  .mov { display: flex; align-items: center; gap: 14px; padding: 10px 18px; }
-  .mov .ic { flex: none; width: 40px; height: 40px; border-radius: 50%; display: grid; place-items: center; font-size: 18px; font-weight: 700; }
-  .mov .ic.baja { background: color-mix(in srgb, var(--bad) 16%, transparent); color: var(--bad); }
-  .mov .ic.alta { background: color-mix(in srgb, var(--ok) 16%, transparent); color: var(--ok); }
-  .mov .der .v { font-size: 16px; }
-  .mov .der .v.baja { color: var(--bad); } .mov .der .v.alta { color: var(--ok); }
-  .empty { color: var(--muted); font-size: 14px; padding: 18px; text-align: center; }
-
-  .err { background: color-mix(in srgb, var(--bad) 15%, var(--card)); color: var(--ink); border-radius: 18px; padding: 12px 16px; margin: 0 0 14px; display: none; font-size: 14px; }
-  .pie { font-size: 12.5px; color: var(--muted); margin: 28px 6px 0; text-align: center; }
-
-  @media (max-width: 520px) {
-    .stats { grid-template-columns: 1fr 1fr 1fr; gap: 6px; }
-    .stat { padding: 12px; border-radius: 18px; }
-    .stat .v { font-size: 18px; }
-    .viviendas { padding-left: 18px; }
-    .viv .links a { padding: 5px 8px; }
-  }
+  .panel { background: var(--card); border: 1px solid var(--line); border-radius: 12px; padding: 16px; }
+  .chart svg { width: 100%; height: auto; display: block; }
+  .legend { display: flex; flex-wrap: wrap; gap: 6px 16px; font-size: 13px; color: var(--muted); margin-top: 8px; }
+  .legend i { display: inline-block; width: 10px; height: 10px; border-radius: 3px; margin-right: 6px; vertical-align: -1px; }
+  .empty { color: var(--muted); font-size: 14px; padding: 8px 0; }
+  ul.log { list-style: none; padding: 0; margin: 0; font-size: 14px; }
+  ul.log li { padding: 7px 0; border-bottom: 1px solid var(--line); display: flex; gap: 12px; flex-wrap: wrap; }
+  ul.log time { color: var(--muted); font-variant-numeric: tabular-nums; min-width: 130px; }
+  .baja { color: var(--warn); } .alta { color: var(--ok); }
 </style>
 </head>
 <body>
 <div class="wrap">
-  <div class="top">
-    <div class="yo"><div class="avatar">DR</div>Dársena Real</div>
-    <div class="pill"><i class="dot"></i><span id="ultima">Cargando…</span></div>
-  </div>
-
+  <header>
+    <h1>Dársena Real <small>Disponibilidad de viviendas por fase · Cartagena</small></h1>
+    <div class="meta"><div id="ultima">Cargando…</div></div>
+  </header>
+  <figure class="hero">
+    <img src="foto.jpg" alt="Fachada del residencial Dársena Real">
+    <figcaption>Dársena Real · Imagen: urbincasa.es</figcaption>
+  </figure>
   <div class="err" id="err"></div>
 
-  <section class="hero" aria-label="Resumen">
-    <div class="lbl">Viviendas disponibles · Cartagena</div>
-    <div class="big" id="libres">—</div>
-    <div class="sub" id="heroSub">&nbsp;</div>
-    <div class="meter"><span id="meter" style="width:0"></span></div>
-    <div class="cred">Imagen: urbincasa.es</div>
-  </section>
+  <section class="kpis" id="kpis"></section>
 
-  <nav class="acciones">
-    <a class="accion" href="#fases"><span class="ic"><svg viewBox="0 0 24 24"><path d="M3 10.5 12 4l9 6.5V20a1 1 0 0 1-1 1h-5v-6h-6v6H4a1 1 0 0 1-1-1z"/></svg></span>Fases</a>
-    <a class="accion" href="#evolucion"><span class="ic"><svg viewBox="0 0 24 24"><path d="M3 17l6-6 4 4 8-8"/><path d="M15 7h6v6"/></svg></span>Evolución</a>
-    <a class="accion" href="#cambios"><span class="ic"><svg viewBox="0 0 24 24"><path d="M7 4v16M7 20l-3-3M7 20l3-3M17 20V4M17 4l-3 3M17 4l3 3"/></svg></span>Cambios</a>
-    <a class="accion" id="fuente" href="https://urbincasa.es/es/promocion/darsena-real-1886" target="_blank" rel="noopener"><span class="ic"><svg viewBox="0 0 24 24"><path d="M14 4h6v6M20 4l-9 9M18 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5"/></svg></span>Web oficial</a>
-  </nav>
+  <h2>Fases</h2>
+  <section class="fases" id="fases"></section>
 
-  <section class="stats" id="stats"></section>
+  <h2>Evolución de viviendas disponibles</h2>
+  <section class="panel chart" id="chart"></section>
 
-  <h2 id="fases">Fases <span id="fasesSub"></span></h2>
-  <section class="card" id="listaFases"></section>
+  <h2>Cambios detectados</h2>
+  <section class="panel"><ul class="log" id="log"></ul></section>
 
-  <h2 id="evolucion">Evolución</h2>
-  <section class="card pad chart">
-    <div class="chips" id="chips"></div>
-    <div class="valor" id="valor"></div>
-    <div id="chart"></div>
-  </section>
-
-  <h2 id="cambios">Cambios detectados</h2>
-  <section class="card" id="log"></section>
-
-  <p class="pie">Seguimiento independiente, no es una página oficial de Urbincasa. Los datos se leen cada día del apartado de viviendas de la web de la promoción; para información oficial y precios, consulta esa web.</p>
+  <p class="sub" style="margin-top:24px">Seguimiento independiente, no es una página oficial de Urbincasa. Los datos se leen cada día del apartado de viviendas de <a id="fuente" href="https://urbincasa.es/es/promocion/darsena-real-1886" target="_blank" rel="noopener">la web de la promoción</a>; para información oficial y precios, consulta esa web.</p>
 </div>
 
 <script>
-const COLORES = ['#4f7cff', '#2ed37f', '#ff9f43', '#c86bff', '#ff5a8a', '#22c7d6', '#f5c542'];
+const COLORES = ['#2f8f5b', '#e0701c', '#3b6fd4', '#a1449b', '#c79a14', '#1f9aa8', '#7a5c3e'];
 const $ = id => document.getElementById(id);
 const fmt = s => s ? new Date(s).toLocaleString('es-ES', { dateStyle: 'short', timeStyle: 'short' }) : '—';
 const esc = s => String(s ?? '').replace(/[&<>"]/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]));
 const arr = x => Array.isArray(x) ? x : (x ? [x] : []);
-const iniciales = n => String(n).split(/\s+/).map(p => /^\d+$/.test(p) ? p : p[0]).join('').toUpperCase().slice(0, 3);
-const plural = (n, s, p) => n === 1 ? s : p;
-
-let datos = null, serie = 'total', abiertas = new Set();
 
 // Versión publicada en GitHub Pages: los datos los escribe cada día GitHub Actions en datos/historial.json
 async function cargar() {
   try {
     const r = await fetch('datos/historial.json?t=' + Date.now(), { cache: 'no-store' });
     if (!r.ok) throw new Error('respuesta ' + r.status);
-    datos = await r.json();
-    pintar();
+    const h = await r.json();
+    pintar({ actual: h.actual, registros: h.registros, cambios: h.cambios, ultimaLectura: h.ultimaLectura, ultimoError: h.ultimoError });
   } catch (e) {
     $('err').style.display = 'block';
     $('err').textContent = 'No se pudieron cargar los datos (' + e.message + '). Prueba a recargar la página dentro de un rato.';
   }
 }
 
-function cuandoCorto(s) {
-  if (!s) return '—';
-  const d = new Date(s), hoy = new Date(), ayer = new Date(Date.now() - 864e5);
-  const h = d.toLocaleTimeString('es-ES', { hour: '2-digit', minute: '2-digit' });
-  if (d.toDateString() === hoy.toDateString()) return 'Hoy, ' + h;
-  if (d.toDateString() === ayer.toDateString()) return 'Ayer, ' + h;
-  return d.toLocaleDateString('es-ES', { day: 'numeric', month: 'short' }) + ', ' + h;
-}
-
-function pintar() {
-  const d = datos;
-  $('ultima').textContent = cuandoCorto(d.ultimaLectura);
-  $('ultima').parentElement.title = 'Última lectura: ' + fmt(d.ultimaLectura) + ' · se actualiza cada día';
+function pintar(d) {
+  $('ultima').textContent = 'Última lectura: ' + fmt(d.ultimaLectura) + ' · se actualiza cada día';
   $('err').style.display = d.ultimoError ? 'block' : 'none';
   if (d.ultimoError) $('err').textContent = 'Último intento fallido: ' + d.ultimoError;
 
@@ -216,119 +129,86 @@ function pintar() {
   const total = fases.reduce((a, f) => a + f.total, 0);
   const libres = fases.reduce((a, f) => a + f.disponibles, 0);
   const vendidas = total - libres;
-  const pctCom = total ? Math.round(vendidas / total * 100) : 0;
+  $('kpis').innerHTML = `
+    <div class="kpi hi"><div class="v">${libres}</div><div class="l">viviendas disponibles</div></div>
+    <div class="kpi"><div class="v">${total}</div><div class="l">viviendas totales</div></div>
+    <div class="kpi"><div class="v">${vendidas}</div><div class="l">no disponibles (vendidas/reservadas)</div></div>
+    <div class="kpi"><div class="v">${total ? Math.round(vendidas / total * 100) : 0}%</div><div class="l">comercializado</div></div>
+    <div class="kpi"><div class="v">${fases.filter(f => f.disponibles > 0).length}/${fases.length}</div><div class="l">fases con viviendas libres</div></div>`;
 
-  $('libres').innerHTML = `${libres}<small>/${total}</small>`;
-  $('heroSub').textContent = `${pctCom}% comercializado · ${fases.filter(f => f.disponibles > 0).length} de ${fases.length} fases con viviendas libres`;
-  $('meter').style.width = (total ? libres / total * 100 : 0) + '%';
-
-  $('stats').innerHTML = `
-    <div class="stat"><div class="v">${total}</div><div class="l">Totales</div></div>
-    <div class="stat"><div class="v">${vendidas}</div><div class="l">Vendidas o reservadas</div></div>
-    <div class="stat"><div class="v">${pctCom}%</div><div class="l">Comercializado</div></div>`;
-
-  $('fasesSub').textContent = `${fases.length} fases`;
-  $('listaFases').innerHTML = fases.map((f, i) => {
-    const c = COLORES[i % COLORES.length];
+  $('fases').innerHTML = fases.map(f => {
     const pct = f.total ? f.disponibles / f.total * 100 : 0;
     const viv = arr(f.viviendas);
-    const filas = viv.map(v => `<div class="viv">
-        <div class="info"><div class="n">${esc(v.codigo)}</div>
-          <div class="s">Planta ${esc(v.planta)} · ${esc(v.dormitorios)} dorm. · ${esc(v.banos)} ${plural(+v.banos, 'baño', 'baños')} · ${esc(v.superficie)} m²</div></div>
-        <div class="links">${v.url ? `<a href="${esc(v.url)}" target="_blank" rel="noopener">Ficha</a>` : ''}${v.plano ? `<a href="${esc(v.plano)}" target="_blank" rel="noopener">Plano</a>` : ''}</div>
-      </div>`).join('');
-    return `<details class="fila ${f.disponibles ? '' : 'agotada'}" data-id="${esc(f.id)}" ${abiertas.has(String(f.id)) ? 'open' : ''}>
-      <summary>
-        <div class="ini" style="background:${c}">${esc(iniciales(f.nombre))}</div>
-        <div class="info"><div class="n">${esc(f.nombre)}</div>
-          <div class="s">${f.disponibles ? `${Math.round(pct)}% libre · ${f.total - f.disponibles} ${plural(f.total - f.disponibles, 'vendida', 'vendidas')}` : '<span class="badge">Agotada</span>'}</div>
-          <div class="prog"><span style="width:${pct}%;background:${c}"></span></div></div>
-        <div class="der"><div class="v">${f.disponibles}</div><div class="s">de ${f.total}</div></div>
-      </summary>
-      ${viv.length ? `<div class="viviendas">${filas}</div>` : ''}
-    </details>`;
+    const filas = viv.map(v => `<tr>
+        <td>${esc(v.codigo)}</td><td class="n">${esc(v.planta)}</td><td class="n">${esc(v.dormitorios)}</td>
+        <td class="n">${esc(v.banos)}</td><td class="n">${esc(v.superficie)} m²</td>
+        <td>${v.url ? `<a href="${esc(v.url)}" target="_blank" rel="noopener">ficha</a>` : ''}
+            ${v.plano ? ` · <a href="${esc(v.plano)}" target="_blank" rel="noopener">plano</a>` : ''}</td></tr>`).join('');
+    return `<article class="fase ${f.disponibles ? '' : 'agotada'}">
+      <div class="top"><span class="nom">${esc(f.nombre)}</span>
+        <span class="num"><b>${f.disponibles}</b> / ${f.total} libres</span></div>
+      <div class="bar" title="${f.disponibles} libres de ${f.total}"><span style="width:${pct}%"></span></div>
+      <div class="sub">${f.disponibles ? `<span class="tag ok">${Math.round(pct)}% libre</span>` : '<span class="tag">Agotada</span>'}
+        &nbsp;${f.total - f.disponibles} vendidas o reservadas</div>
+      ${viv.length ? `<details><summary>Ver ${viv.length} vivienda${viv.length > 1 ? 's' : ''} disponible${viv.length > 1 ? 's' : ''}</summary>
+        <div class="tbl-scroll"><table><thead><tr><th>Vivienda</th><th class="n">Planta</th><th class="n">Dorm.</th><th class="n">Baños</th><th class="n">Sup.</th><th></th></tr></thead>
+        <tbody>${filas}</tbody></table></div></details>` : ''}
+    </article>`;
   }).join('');
-  document.querySelectorAll('details.fila').forEach(el => el.addEventListener('toggle', () => {
-    el.open ? abiertas.add(el.dataset.id) : abiertas.delete(el.dataset.id);
-  }));
 
-  if (serie !== 'total' && !fases.some(f => String(f.id) === serie)) serie = 'total';
-  $('chips').innerHTML = [{ id: 'total', nombre: 'Total' }, ...fases].map(f =>
-    `<button class="chip ${String(f.id) === serie ? 'on' : ''}" data-s="${esc(f.id)}">${esc(f.nombre)}</button>`).join('');
-  $('chips').querySelectorAll('.chip').forEach(b => b.onclick = () => { serie = b.dataset.s; pintar(); });
   pintarGrafico(arr(d.registros), fases, d.ultimaLectura);
 
-  pintarCambios(arr(d.cambios));
-}
-
-function valorSerie(fasesReg, fases) {
-  if (serie === 'total') return arr(fasesReg).reduce((a, q) => a + (q.disponibles || 0), 0);
-  return (arr(fasesReg).find(q => String(q.id) === serie) || {}).disponibles ?? 0;
+  const cambios = arr(d.cambios).slice().reverse();
+  $('log').innerHTML = cambios.length ? cambios.slice(0, 200).map(c => {
+    const baja = c.tipo.startsWith('ya no');
+    return `<li><time>${fmt(c.fecha)}</time><span><b>${esc(c.fase)}</b> ${esc(c.vivienda)}</span>
+      <span class="${baja ? 'baja' : 'alta'}">${esc(c.tipo)}</span></li>`;
+  }).join('') : '<li class="empty">Aún no hay cambios. Aparecerán aquí cuando una vivienda se venda/reserve o vuelva a estar libre.</li>';
 }
 
 function pintarGrafico(regs, fases, ultima) {
-  const idx = fases.findIndex(f => String(f.id) === serie);
-  const color = serie === 'total' ? '#4f7cff' : COLORES[idx % COLORES.length];
-  const actual = serie === 'total' ? fases.reduce((a, f) => a + f.disponibles, 0) : (fases[idx] || {}).disponibles ?? 0;
-  if (!regs.length) { $('valor').textContent = ''; $('chart').innerHTML = '<div class="empty">Sin datos todavía.</div>'; return; }
-
-  const pts = regs.map(r => ({ t: new Date(r.fecha).getTime(), v: valorSerie(r.fases) }));
+  if (!regs.length) { $('chart').innerHTML = '<div class="empty">Sin datos todavía.</div>'; return; }
+  // Puntos: cada registro + la última lectura (para que la línea llegue hasta hoy)
+  const pts = regs.map(r => ({ t: new Date(r.fecha).getTime(), fases: arr(r.fases) }));
   const tFin = Math.max(new Date(ultima || Date.now()).getTime(), pts[pts.length - 1].t);
-  pts.push({ t: tFin, v: pts[pts.length - 1].v });
-  const ini = pts[0].v, dif = actual - ini;
-  $('valor').innerHTML = `${actual}<small>${dif === 0 ? 'sin cambios desde ' + new Date(pts[0].t).toLocaleDateString('es-ES', { day: 'numeric', month: 'short' })
-    : (dif > 0 ? '+' : '−') + Math.abs(dif) + ' desde el inicio'}</small>`;
+  pts.push({ t: tFin, fases: pts[pts.length - 1].fases });
 
-  const W = 700, H = 200, L = 8, R = 8, T = 16, B = 2;
+  const W = 1000, H = 300, L = 40, R = 16, T = 12, B = 32;
   const t0 = pts[0].t, t1 = Math.max(tFin, t0 + 3600e3);
-  const vals = pts.map(p => p.v), maxV = Math.max(1, ...vals), minV = Math.min(...vals);
-  const lo = Math.max(0, minV - Math.max(2, Math.ceil((maxV - minV) * 0.4))), hi = maxV + Math.max(1, Math.ceil((maxV - lo) * 0.15));
+  const maxV = Math.max(1, ...pts.flatMap(p => p.fases.map(f => f.disponibles)));
   const x = t => L + (t - t0) / (t1 - t0) * (W - L - R);
-  const y = v => T + (1 - (v - lo) / (hi - lo)) * (H - T - B);
+  const y = v => T + (1 - v / maxV) * (H - T - B);
 
-  let path = '';
-  pts.forEach((p, k) => { path += k === 0 ? `M${x(p.t)},${y(p.v)}` : `H${x(p.t)}V${y(p.v)}`; });
-  const area = `${path}V${H - B}H${x(t0)}Z`;
-  const ult = pts[pts.length - 1];
-  const fecha = t => new Date(t).toLocaleDateString('es-ES', { day: 'numeric', month: 'short' });
+  let g = '';
+  const paso = Math.max(1, Math.ceil(maxV / 5));
+  for (let v = 0; v <= maxV; v += paso)
+    g += `<line x1="${L}" x2="${W - R}" y1="${y(v)}" y2="${y(v)}" stroke="var(--line)"/>
+          <text x="${L - 8}" y="${y(v) + 4}" text-anchor="end" font-size="12" fill="var(--muted)">${v}</text>`;
+  g += `<text x="${L}" y="${H - 8}" font-size="12" fill="var(--muted)">${fmt(new Date(t0).toISOString())}</text>
+        <text x="${W - R}" y="${H - 8}" font-size="12" text-anchor="end" fill="var(--muted)">${fmt(new Date(t1).toISOString())}</text>`;
 
-  $('chart').innerHTML = `<svg viewBox="0 0 ${W} ${H}" role="img" aria-label="Viviendas disponibles a lo largo del tiempo">
-    <defs><linearGradient id="g" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0" stop-color="${color}" stop-opacity=".35"/><stop offset="1" stop-color="${color}" stop-opacity="0"/></linearGradient></defs>
-    <line x1="${L}" x2="${W - R}" y1="${H - B}" y2="${H - B}" stroke="var(--line)"/>
-    <path d="${area}" fill="url(#g)"/>
-    <path d="${path}" fill="none" stroke="${color}" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"/>
-    <circle cx="${x(ult.t)}" cy="${y(ult.v)}" r="9" fill="${color}" opacity=".25"/>
-    <circle cx="${x(ult.t)}" cy="${y(ult.v)}" r="5" fill="${color}" stroke="var(--card)" stroke-width="2"/>
-  </svg><div class="ejes"><span>${fecha(t0)}</span><span>${fecha(t1)}</span></div>${regs.length === 1 ? '<div class="empty" style="padding:8px 0 0;text-align:left">La línea se irá dibujando a medida que cambie la disponibilidad.</div>' : ''}`;
-}
+  const lineas = fases.map((f, i) => {
+    const c = COLORES[i % COLORES.length];
+    let dPath = '', prev = null;
+    pts.forEach((p, k) => {
+      const v = (p.fases.find(q => q.id === f.id) || {}).disponibles ?? 0;
+      const X = x(p.t), Y = y(v);
+      dPath += k === 0 ? `M${X},${Y}` : `H${X}V${Y}`; // escalonado: el valor se mantiene hasta el siguiente cambio
+      prev = v;
+    });
+    const ult = pts[pts.length - 1];
+    return `<path d="${dPath}" fill="none" stroke="${c}" stroke-width="2.5" stroke-linejoin="round"><title>${esc(f.nombre)}</title></path>
+      <circle cx="${x(ult.t)}" cy="${y(prev)}" r="4" fill="${c}"><title>${esc(f.nombre)}: ${prev}</title></circle>`;
+  }).join('');
 
-function pintarCambios(cambios) {
-  const lista = cambios.slice().reverse().slice(0, 200);
-  if (!lista.length) {
-    $('log').innerHTML = '<div class="empty">Aún no hay cambios. Aparecerán aquí cuando una vivienda se venda o reserve, o vuelva a estar libre.</div>';
-    return;
-  }
-  let html = '', diaPrev = '';
-  lista.forEach(c => {
-    const dia = new Date(c.fecha).toLocaleDateString('es-ES', { weekday: 'long', day: 'numeric', month: 'long' });
-    if (dia !== diaPrev) { html += `<div class="dia">${esc(dia[0].toUpperCase() + dia.slice(1))}</div>`; diaPrev = dia; }
-    const baja = String(c.tipo).startsWith('ya no');
-    const k = baja ? 'baja' : 'alta';
-    html += `<div class="mov">
-      <div class="ic ${k}">${baja ? '↓' : '↑'}</div>
-      <div class="info"><div class="n">${esc(c.fase)} · ${esc(c.vivienda)}</div>
-        <div class="s">${baja ? 'Vendida o reservada' : 'Vuelve a estar libre'} · ${new Date(c.fecha).toLocaleTimeString('es-ES', { hour: '2-digit', minute: '2-digit' })}</div></div>
-      <div class="der"><div class="v ${k}">${baja ? '−1' : '+1'}</div></div>
-    </div>`;
-  });
-  $('log').innerHTML = html;
+  const nota = regs.length === 1 ? '<div class="sub" style="margin-top:6px">Solo hay una lectura con estos números; la línea se irá dibujando a medida que cambie la disponibilidad.</div>' : '';
+  $('chart').innerHTML = `<svg viewBox="0 0 ${W} ${H}" role="img" aria-label="Viviendas disponibles por fase a lo largo del tiempo">${g}${lineas}</svg>
+    <div class="legend">${fases.map((f, i) => `<span><i style="background:${COLORES[i % COLORES.length]}"></i>${esc(f.nombre)} (${f.disponibles})</span>`).join('')}</div>${nota}`;
 }
 
 if (!/^https?:$/.test(location.protocol)) {
   // Abierto desde el disco o en una vista previa: no se puede leer datos/historial.json
-  $('ultima').textContent = 'Sin datos';
-  $('libres').textContent = '—';
+  $('ultima').textContent = '';
   $('err').style.display = 'block';
   $('err').innerHTML = 'Esta es la versión para GitHub Pages: los datos solo se cargan cuando la página está publicada en GitHub. ' +
     'Para verla en tu ordenador, usa <b>Iniciar.bat</b> en la carpeta DarsenaTracker.';
