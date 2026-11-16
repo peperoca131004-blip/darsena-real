@@ -18,7 +18,7 @@ jobs:
     env:
       TZ: Europe/Madrid
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v5
 
       - name: Leer la web de la promoción
         shell: pwsh
