@@ -1,5 +1,9 @@
 # Dársena Real · disponibilidad de viviendas
 
+## 👉 [Abrir la página](https://peperoca131004-blip.github.io/darsena-real/)
+
+<https://peperoca131004-blip.github.io/darsena-real/>
+
 Página que muestra cuántas viviendas quedan libres en cada fase del residencial Dársena Real (Cartagena).
 GitHub lee cada día la web de la promoción y publica los datos con GitHub Pages.
 
