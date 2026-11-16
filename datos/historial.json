@@ -1,652 +1,646 @@
 {
-    "ultimaLectura":  "2026-11-16T16:06:51",
-    "ultimoError":  null,
-    "actual":  [
-                   {
-                       "id":  "bloque1",
-                       "nombre":  "Exterior 1",
-                       "total":  23,
-                       "disponibles":  0,
-                       "viviendas":  [
-
-                                     ]
-                   },
-                   {
-                       "id":  "bloque2",
-                       "nombre":  "Exterior 2",
-                       "total":  18,
-                       "disponibles":  2,
-                       "viviendas":  [
-                                         {
-                                             "codigo":  "121-B1-2-2C",
-                                             "referencia":  "3716-009010",
-                                             "planta":  "2",
-                                             "dormitorios":  "3",
-                                             "banos":  "2",
-                                             "superficie":  "105",
-                                             "plano":  "https://drive.google.com/uc?export=view\u0026id=1PvqL9hydKEPWRbFMqEBBFvHeeQjpLDTF",
-                                             "url":  "https://urbincasa.es/es/propiedad/3716-009010"
-                                         },
-                                         {
-                                             "codigo":  "121-B1-2-1C",
-                                             "referencia":  "3716-009005",
-                                             "planta":  "1",
-                                             "dormitorios":  "3",
-                                             "banos":  "2",
-                                             "superficie":  "105",
-                                             "plano":  "https://drive.google.com/uc?export=view\u0026id=1PvqL9hydKEPWRbFMqEBBFvHeeQjpLDTF",
-                                             "url":  "https://urbincasa.es/es/propiedad/3716-009005"
-                                         }
-                                     ]
-                   },
-                   {
-                       "id":  "bloque3",
-                       "nombre":  "Exterior 3",
-                       "total":  12,
-                       "disponibles":  2,
-                       "viviendas":  [
-                                         {
-                                             "codigo":  "121-B1-3-1D",
-                                             "referencia":  "3716-009028",
-                                             "planta":  "1",
-                                             "dormitorios":  "3",
-                                             "banos":  "2",
-                                             "superficie":  "121",
-                                             "plano":  "https://drive.google.com/uc?export=view\u0026id=12gqkEHTPAzqzB_7fX9JBHBOESU3UA802",
-                                             "url":  "https://urbincasa.es/es/propiedad/3716-009028"
-                                         },
-                                         {
-                                             "codigo":  "121-B1-3-1C",
-                                             "referencia":  "3716-009027",
-                                             "planta":  "1",
-                                             "dormitorios":  "3",
-                                             "banos":  "2",
-                                             "superficie":  "98",
-                                             "plano":  "https://drive.google.com/uc?export=view\u0026id=1GRS8WBf_iu0cE1VRrBBRJNVzEpZd9-6Q",
-                                             "url":  "https://urbincasa.es/es/propiedad/3716-009027"
-                                         }
-                                     ]
-                   },
-                   {
-                       "id":  "bloque4",
-                       "nombre":  "Interior 1",
-                       "total":  25,
-                       "disponibles":  0,
-                       "viviendas":  [
-
-                                     ]
-                   },
-                   {
-                       "id":  "bloque5",
-                       "nombre":  "Interior 2",
-                       "total":  30,
-                       "disponibles":  13,
-                       "viviendas":  [
-                                         {
-                                             "codigo":  "121-B1-4-1A",
-                                             "referencia":  "3716-009170",
-                                             "planta":  "1",
-                                             "dormitorios":  "3",
-                                             "banos":  "2",
-                                             "superficie":  "113",
-                                             "plano":  "https://drive.google.com/uc?export=view\u0026id=1tFvFN0Lw8Idf-YoXbbwrcMbMCk879wsG",
-                                             "url":  "https://urbincasa.es/es/propiedad/3716-009170"
-                                         },
-                                         {
-                                             "codigo":  "121-B1-4-0A",
-                                             "referencia":  "3716-009168",
-                                             "planta":  "0",
-                                             "dormitorios":  "3",
-                                             "banos":  "2",
-                                             "superficie":  "113",
-                                             "plano":  "https://drive.google.com/uc?export=view\u0026id=1plQFFSc7driyJ7uTnOYuX4AOjY1HCsYs",
-                                             "url":  "https://urbincasa.es/es/propiedad/3716-009168"
-                                         },
-                                         {
-                                             "codigo":  "121-B1-4-4B",
-                                             "referencia":  "3716-009186",
-                                             "planta":  "4",
-                                             "dormitorios":  "3",
-                                             "banos":  "2",
-                                             "superficie":  "100",
-                                             "plano":  "https://drive.google.com/uc?export=view\u0026id=1Fillz8pa2RWNMMZxRRU_GDlaxgvxP-3C",
-                                             "url":  "https://urbincasa.es/es/propiedad/3716-009186"
-                                         },
-                                         {
-                                             "codigo":  "121-B1-4-1B",
-                                             "referencia":  "3716-009171",
-                                             "planta":  "1",
-                                             "dormitorios":  "3",
-                                             "banos":  "2",
-                                             "superficie":  "112",
-                                             "plano":  "https://drive.google.com/uc?export=view\u0026id=1kTN-kN3ofgiePOXJq3cHMK4LzoRy2FAt",
-                                             "url":  "https://urbincasa.es/es/propiedad/3716-009171"
-                                         },
-                                         {
-                                             "codigo":  "121-B1-4-0B",
-                                             "referencia":  "3716-009169",
-                                             "planta":  "0",
-                                             "dormitorios":  "3",
-                                             "banos":  "2",
-                                             "superficie":  "112",
-                                             "plano":  "https://drive.google.com/uc?export=view\u0026id=1ms__o169YLLJjB6gZzEgUz-XUjUud7vv",
-                                             "url":  "https://urbincasa.es/es/propiedad/3716-009169"
-                                         },
-                                         {
-                                             "codigo":  "121-B1-5-1A",
-                                             "referencia":  "3716-009194",
-                                             "planta":  "1",
-                                             "dormitorios":  "3",
-                                             "banos":  "2",
-                                             "superficie":  "118",
-                                             "plano":  "https://drive.google.com/uc?export=view\u0026id=1JFZPlBBYd1S0WU-3ET8JsTEjNFIcp3Hz",
-                                             "url":  "https://urbincasa.es/es/propiedad/3716-009194"
-                                         },
-                                         {
-                                             "codigo":  "121-B1-5-4B",
-                                             "referencia":  "3716-009210",
-                                             "planta":  "4",
-                                             "dormitorios":  "3",
-                                             "banos":  "2",
-                                             "superficie":  "100",
-                                             "plano":  "https://drive.google.com/uc?export=view\u0026id=1peT0UShLunHdGmqIuh9XyFahZnHJTZvR",
-                                             "url":  "https://urbincasa.es/es/propiedad/3716-009210"
-                                         },
-                                         {
-                                             "codigo":  "121-B1-5-1B",
-                                             "referencia":  "3716-009195",
-                                             "planta":  "1",
-                                             "dormitorios":  "3",
-                                             "banos":  "2",
-                                             "superficie":  "112",
-                                             "plano":  "https://drive.google.com/uc?export=view\u0026id=1nPNjRGsBVd2p6VnMPr2JrQKYbxd5cy8E",
-                                             "url":  "https://urbincasa.es/es/propiedad/3716-009195"
-                                         },
-                                         {
-                                             "codigo":  "121-B1-5-0B",
-                                             "referencia":  "3716-009191",
-                                             "planta":  "0",
-                                             "dormitorios":  "3",
-                                             "banos":  "2",
-                                             "superficie":  "112",
-                                             "plano":  "https://drive.google.com/uc?export=view\u0026id=18eSV9bL-QCqUWBwMK0_VJ2vShoSMVHHf",
-                                             "url":  "https://urbincasa.es/es/propiedad/3716-009191"
-                                         },
-                                         {
-                                             "codigo":  "121-B1-6-4A",
-                                             "referencia":  "3716-009232",
-                                             "planta":  "4",
-                                             "dormitorios":  "3",
-                                             "banos":  "2",
-                                             "superficie":  "100",
-                                             "plano":  "https://drive.google.com/uc?export=view\u0026id=10-e5iKQH82O3rpsQ2zTkmYApuspu2gsR",
-                                             "url":  "https://urbincasa.es/es/propiedad/3716-009232"
-                                         },
-                                         {
-                                             "codigo":  "121-B1-6-0A",
-                                             "referencia":  "3716-009214",
-                                             "planta":  "0",
-                                             "dormitorios":  "3",
-                                             "banos":  "2",
-                                             "superficie":  "112",
-                                             "plano":  "https://drive.google.com/uc?export=view\u0026id=1RFr1aQMEUVJk5Ewa1xirpwUQMtkf5jP2",
-                                             "url":  "https://urbincasa.es/es/propiedad/3716-009214"
-                                         },
-                                         {
-                                             "codigo":  "121-B1-6-4B",
-                                             "referencia":  "3716-009233",
-                                             "planta":  "4",
-                                             "dormitorios":  "3",
-                                             "banos":  "2",
-                                             "superficie":  "106",
-                                             "plano":  "https://drive.google.com/uc?export=view\u0026id=1NlMHpX5jw5vomqwklIK8Az-yvnSnuBjw",
-                                             "url":  "https://urbincasa.es/es/propiedad/3716-009233"
-                                         },
-                                         {
-                                             "codigo":  "121-B1-6-1B",
-                                             "referencia":  "3716-009218",
-                                             "planta":  "1",
-                                             "dormitorios":  "3",
-                                             "banos":  "2",
-                                             "superficie":  "118",
-                                             "plano":  "https://drive.google.com/uc?export=view\u0026id=1GUGA1duz4WgkFLitpDfUp2NsYcVoleQf",
-                                             "url":  "https://urbincasa.es/es/propiedad/3716-009218"
-                                         }
-                                     ]
-                   },
-                   {
-                       "id":  "bloque7",
-                       "nombre":  "Exterior 4",
-                       "total":  39,
-                       "disponibles":  38,
-                       "viviendas":  [
-                                         {
-                                             "codigo":  "121-B1-6-4C",
-                                             "referencia":  "3716-009234",
-                                             "planta":  "4",
-                                             "dormitorios":  "2",
-                                             "banos":  "2",
-                                             "superficie":  "93",
-                                             "plano":  "https://drive.google.com/uc?export=view\u0026id=1tUpwB9XoDSk1Ylg7ooUF5kAoUBOcniMo",
-                                             "url":  "https://urbincasa.es/es/propiedad/3716-009234"
-                                         },
-                                         {
-                                             "codigo":  "121-B1-6-3C",
-                                             "referencia":  "3716-009229",
-                                             "planta":  "3",
-                                             "dormitorios":  "2",
-                                             "banos":  "2",
-                                             "superficie":  "96",
-                                             "plano":  "https://drive.google.com/uc?export=view\u0026id=11FSwSr231bQHJwWTCjBEcZVbYwN75vCw",
-                                             "url":  "https://urbincasa.es/es/propiedad/3716-009229"
-                                         },
-                                         {
-                                             "codigo":  "121-B1-6-2C",
-                                             "referencia":  "3716-009224",
-                                             "planta":  "2",
-                                             "dormitorios":  "2",
-                                             "banos":  "2",
-                                             "superficie":  "96",
-                                             "plano":  "https://drive.google.com/uc?export=view\u0026id=11FSwSr231bQHJwWTCjBEcZVbYwN75vCw",
-                                             "url":  "https://urbincasa.es/es/propiedad/3716-009224"
-                                         },
-                                         {
-                                             "codigo":  "121-B1-6-1C",
-                                             "referencia":  "3716-009219",
-                                             "planta":  "1",
-                                             "dormitorios":  "2",
-                                             "banos":  "2",
-                                             "superficie":  "96",
-                                             "plano":  "https://drive.google.com/uc?export=view\u0026id=11FSwSr231bQHJwWTCjBEcZVbYwN75vCw",
-                                             "url":  "https://urbincasa.es/es/propiedad/3716-009219"
-                                         },
-                                         {
-                                             "codigo":  "121-B1-6-4D",
-                                             "referencia":  "3716-009235",
-                                             "planta":  "4",
-                                             "dormitorios":  "2",
-                                             "banos":  "2",
-                                             "superficie":  "91",
-                                             "plano":  "https://drive.google.com/uc?export=view\u0026id=1ihq6xQuOBRumuAyxUmPH18r8DiJWFPmg",
-                                             "url":  "https://urbincasa.es/es/propiedad/3716-009235"
-                                         },
-                                         {
-                                             "codigo":  "121-B1-6-3D",
-                                             "referencia":  "3716-009230",
-                                             "planta":  "3",
-                                             "dormitorios":  "2",
-                                             "banos":  "2",
-                                             "superficie":  "92",
-                                             "plano":  "https://drive.google.com/uc?export=view\u0026id=1X_ufFM59tlXNTTqmjiPLjZnf2heU5mUP",
-                                             "url":  "https://urbincasa.es/es/propiedad/3716-009230"
-                                         },
-                                         {
-                                             "codigo":  "121-B1-6-2D",
-                                             "referencia":  "3716-009225",
-                                             "planta":  "2",
-                                             "dormitorios":  "2",
-                                             "banos":  "2",
-                                             "superficie":  "92",
-                                             "plano":  "https://drive.google.com/uc?export=view\u0026id=1X_ufFM59tlXNTTqmjiPLjZnf2heU5mUP",
-                                             "url":  "https://urbincasa.es/es/propiedad/3716-009225"
-                                         },
-                                         {
-                                             "codigo":  "121-B1-6-1D",
-                                             "referencia":  "3716-009220",
-                                             "planta":  "1",
-                                             "dormitorios":  "2",
-                                             "banos":  "2",
-                                             "superficie":  "92",
-                                             "plano":  "https://drive.google.com/uc?export=view\u0026id=1X_ufFM59tlXNTTqmjiPLjZnf2heU5mUP",
-                                             "url":  "https://urbincasa.es/es/propiedad/3716-009220"
-                                         },
-                                         {
-                                             "codigo":  "121-B1-6-4E",
-                                             "referencia":  "3716-009236",
-                                             "planta":  "4",
-                                             "dormitorios":  "2",
-                                             "banos":  "2",
-                                             "superficie":  "90",
-                                             "plano":  "https://drive.google.com/uc?export=view\u0026id=19zc5t50wfjzNcdww3pP1Lp_DTPHzuGQz",
-                                             "url":  "https://urbincasa.es/es/propiedad/3716-009236"
-                                         },
-                                         {
-                                             "codigo":  "121-B1-6-3E",
-                                             "referencia":  "3716-009231",
-                                             "planta":  "3",
-                                             "dormitorios":  "2",
-                                             "banos":  "2",
-                                             "superficie":  "93",
-                                             "plano":  "https://drive.google.com/uc?export=view\u0026id=1XqiBbtI7Q9cA4yzUkaBECW73-rfw9CsF",
-                                             "url":  "https://urbincasa.es/es/propiedad/3716-009231"
-                                         },
-                                         {
-                                             "codigo":  "121-B1-6-2E",
-                                             "referencia":  "3716-009226",
-                                             "planta":  "2",
-                                             "dormitorios":  "2",
-                                             "banos":  "2",
-                                             "superficie":  "93",
-                                             "plano":  "https://drive.google.com/uc?export=view\u0026id=1XqiBbtI7Q9cA4yzUkaBECW73-rfw9CsF",
-                                             "url":  "https://urbincasa.es/es/propiedad/3716-009226"
-                                         },
-                                         {
-                                             "codigo":  "121-B1-6-1E",
-                                             "referencia":  "3716-009221",
-                                             "planta":  "1",
-                                             "dormitorios":  "2",
-                                             "banos":  "2",
-                                             "superficie":  "93",
-                                             "plano":  "https://drive.google.com/uc?export=view\u0026id=1XqiBbtI7Q9cA4yzUkaBECW73-rfw9CsF",
-                                             "url":  "https://urbincasa.es/es/propiedad/3716-009221"
-                                         },
-                                         {
-                                             "codigo":  "121-B1-5-4C",
-                                             "referencia":  "3716-009211",
-                                             "planta":  "4",
-                                             "dormitorios":  "2",
-                                             "banos":  "2",
-                                             "superficie":  "90",
-                                             "plano":  "https://drive.google.com/uc?export=view\u0026id=1Wlh7UmU_RvQEqv6feSiN2PvndWfZbFPE",
-                                             "url":  "https://urbincasa.es/es/propiedad/3716-009211"
-                                         },
-                                         {
-                                             "codigo":  "121-B1-5-3C",
-                                             "referencia":  "3716-009206",
-                                             "planta":  "3",
-                                             "dormitorios":  "2",
-                                             "banos":  "2",
-                                             "superficie":  "93",
-                                             "plano":  "https://drive.google.com/uc?export=view\u0026id=1XzAUXKptbj1KqLk2O-PYb9qsuEpyOXXy",
-                                             "url":  "https://urbincasa.es/es/propiedad/3716-009206"
-                                         },
-                                         {
-                                             "codigo":  "121-B1-5-2C",
-                                             "referencia":  "3716-009201",
-                                             "planta":  "2",
-                                             "dormitorios":  "2",
-                                             "banos":  "2",
-                                             "superficie":  "93",
-                                             "plano":  "https://drive.google.com/uc?export=view\u0026id=1XzAUXKptbj1KqLk2O-PYb9qsuEpyOXXy",
-                                             "url":  "https://urbincasa.es/es/propiedad/3716-009201"
-                                         },
-                                         {
-                                             "codigo":  "121-B1-5-1C",
-                                             "referencia":  "3716-009196",
-                                             "planta":  "1",
-                                             "dormitorios":  "2",
-                                             "banos":  "2",
-                                             "superficie":  "93",
-                                             "plano":  "https://drive.google.com/uc?export=view\u0026id=1XzAUXKptbj1KqLk2O-PYb9qsuEpyOXXy",
-                                             "url":  "https://urbincasa.es/es/propiedad/3716-009196"
-                                         },
-                                         {
-                                             "codigo":  "121-B1-5-0C",
-                                             "referencia":  "3716-009192",
-                                             "planta":  "0",
-                                             "dormitorios":  "3",
-                                             "banos":  "2",
-                                             "superficie":  "130",
-                                             "plano":  "https://drive.google.com/uc?export=view\u0026id=1XI51ZOrLVPP4WDPxTC_OGRokAM1s7v6g",
-                                             "url":  "https://urbincasa.es/es/propiedad/3716-009192"
-                                         },
-                                         {
-                                             "codigo":  "121-B1-5-4D",
-                                             "referencia":  "3716-009212",
-                                             "planta":  "4",
-                                             "dormitorios":  "2",
-                                             "banos":  "2",
-                                             "superficie":  "91",
-                                             "plano":  "https://drive.google.com/uc?export=view\u0026id=1xhEL1-2DyxOE8kQgGUVLMO2Vyb3z_-uK",
-                                             "url":  "https://urbincasa.es/es/propiedad/3716-009212"
-                                         },
-                                         {
-                                             "codigo":  "121-B1-5-3D",
-                                             "referencia":  "3716-009207",
-                                             "planta":  "3",
-                                             "dormitorios":  "2",
-                                             "banos":  "2",
-                                             "superficie":  "92",
-                                             "plano":  "https://drive.google.com/uc?export=view\u0026id=1LrRrPNGqoorgB3KaXXljbl4lvCzQyYpz",
-                                             "url":  "https://urbincasa.es/es/propiedad/3716-009207"
-                                         },
-                                         {
-                                             "codigo":  "121-B1-5-2D",
-                                             "referencia":  "3716-009202",
-                                             "planta":  "2",
-                                             "dormitorios":  "2",
-                                             "banos":  "2",
-                                             "superficie":  "92",
-                                             "plano":  "https://drive.google.com/uc?export=view\u0026id=1LrRrPNGqoorgB3KaXXljbl4lvCzQyYpz",
-                                             "url":  "https://urbincasa.es/es/propiedad/3716-009202"
-                                         },
-                                         {
-                                             "codigo":  "121-B1-5-1D",
-                                             "referencia":  "3716-009197",
-                                             "planta":  "1",
-                                             "dormitorios":  "2",
-                                             "banos":  "2",
-                                             "superficie":  "92",
-                                             "plano":  "https://drive.google.com/uc?export=view\u0026id=1LrRrPNGqoorgB3KaXXljbl4lvCzQyYpz",
-                                             "url":  "https://urbincasa.es/es/propiedad/3716-009197"
-                                         },
-                                         {
-                                             "codigo":  "121-B1-5-4E",
-                                             "referencia":  "3716-009213",
-                                             "planta":  "4",
-                                             "dormitorios":  "2",
-                                             "banos":  "2",
-                                             "superficie":  "95",
-                                             "plano":  "https://drive.google.com/uc?export=view\u0026id=1aJT582Htp-29WPyPpN4GbaJ01ypjYwjg",
-                                             "url":  "https://urbincasa.es/es/propiedad/3716-009213"
-                                         },
-                                         {
-                                             "codigo":  "121-B1-5-3E",
-                                             "referencia":  "3716-009208",
-                                             "planta":  "3",
-                                             "dormitorios":  "2",
-                                             "banos":  "2",
-                                             "superficie":  "98",
-                                             "plano":  "https://drive.google.com/uc?export=view\u0026id=1PZ-c7THaAF-7skefvCrrgsct4nMOTj2N",
-                                             "url":  "https://urbincasa.es/es/propiedad/3716-009208"
-                                         },
-                                         {
-                                             "codigo":  "121-B1-5-2E",
-                                             "referencia":  "3716-009203",
-                                             "planta":  "2",
-                                             "dormitorios":  "2",
-                                             "banos":  "2",
-                                             "superficie":  "98",
-                                             "plano":  "https://drive.google.com/uc?export=view\u0026id=1PZ-c7THaAF-7skefvCrrgsct4nMOTj2N",
-                                             "url":  "https://urbincasa.es/es/propiedad/3716-009203"
-                                         },
-                                         {
-                                             "codigo":  "121-B1-5-1E",
-                                             "referencia":  "3716-009198",
-                                             "planta":  "1",
-                                             "dormitorios":  "2",
-                                             "banos":  "2",
-                                             "superficie":  "98",
-                                             "plano":  "https://drive.google.com/uc?export=view\u0026id=1PZ-c7THaAF-7skefvCrrgsct4nMOTj2N",
-                                             "url":  "https://urbincasa.es/es/propiedad/3716-009198"
-                                         },
-                                         {
-                                             "codigo":  "121-B1-5-0D",
-                                             "referencia":  "3716-009193",
-                                             "planta":  "0",
-                                             "dormitorios":  "3",
-                                             "banos":  "2",
-                                             "superficie":  "139",
-                                             "plano":  "https://drive.google.com/uc?export=view\u0026id=1Ufy-W49zutaGdf9KFITrhb7n7NNfDUy_",
-                                             "url":  "https://urbincasa.es/es/propiedad/3716-009193"
-                                         },
-                                         {
-                                             "codigo":  "121-B1-4-4C",
-                                             "referencia":  "3716-009187",
-                                             "planta":  "4",
-                                             "dormitorios":  "2",
-                                             "banos":  "2",
-                                             "superficie":  "89",
-                                             "plano":  "https://drive.google.com/uc?export=view\u0026id=1O1MY3mrZKwSCXrt9dG0WbCRWFCYFVLs_",
-                                             "url":  "https://urbincasa.es/es/propiedad/3716-009187"
-                                         },
-                                         {
-                                             "codigo":  "121-B1-4-3C",
-                                             "referencia":  "3716-009182",
-                                             "planta":  "3",
-                                             "dormitorios":  "2",
-                                             "banos":  "2",
-                                             "superficie":  "92",
-                                             "plano":  "https://drive.google.com/uc?export=view\u0026id=1ZlRVVwQP416cnlA1N1CgDwxCuk1jyXxD",
-                                             "url":  "https://urbincasa.es/es/propiedad/3716-009182"
-                                         },
-                                         {
-                                             "codigo":  "121-B1-4-2C",
-                                             "referencia":  "3716-009177",
-                                             "planta":  "2",
-                                             "dormitorios":  "2",
-                                             "banos":  "2",
-                                             "superficie":  "92",
-                                             "plano":  "https://drive.google.com/uc?export=view\u0026id=1ZlRVVwQP416cnlA1N1CgDwxCuk1jyXxD",
-                                             "url":  "https://urbincasa.es/es/propiedad/3716-009177"
-                                         },
-                                         {
-                                             "codigo":  "121-B1-4-1C",
-                                             "referencia":  "3716-009172",
-                                             "planta":  "1",
-                                             "dormitorios":  "2",
-                                             "banos":  "2",
-                                             "superficie":  "92",
-                                             "plano":  "https://drive.google.com/uc?export=view\u0026id=1ZlRVVwQP416cnlA1N1CgDwxCuk1jyXxD",
-                                             "url":  "https://urbincasa.es/es/propiedad/3716-009172"
-                                         },
-                                         {
-                                             "codigo":  "121-B1-4-4D",
-                                             "referencia":  "3716-009188",
-                                             "planta":  "4",
-                                             "dormitorios":  "3",
-                                             "banos":  "2",
-                                             "superficie":  "113",
-                                             "plano":  "https://drive.google.com/uc?export=view\u0026id=14v03rCtUh7JQ3sZpreXlrpp_seFxjeZE",
-                                             "url":  "https://urbincasa.es/es/propiedad/3716-009188"
-                                         },
-                                         {
-                                             "codigo":  "121-B1-4-3D",
-                                             "referencia":  "3716-009183",
-                                             "planta":  "3",
-                                             "dormitorios":  "3",
-                                             "banos":  "2",
-                                             "superficie":  "114",
-                                             "plano":  "https://drive.google.com/uc?export=view\u0026id=1ttafwRM2lqWnk5-NdxQ_LQyBGC1gFd7t",
-                                             "url":  "https://urbincasa.es/es/propiedad/3716-009183"
-                                         },
-                                         {
-                                             "codigo":  "121-B1-4-2D",
-                                             "referencia":  "3716-009178",
-                                             "planta":  "2",
-                                             "dormitorios":  "3",
-                                             "banos":  "2",
-                                             "superficie":  "114",
-                                             "plano":  "https://drive.google.com/uc?export=view\u0026id=1ttafwRM2lqWnk5-NdxQ_LQyBGC1gFd7t",
-                                             "url":  "https://urbincasa.es/es/propiedad/3716-009178"
-                                         },
-                                         {
-                                             "codigo":  "121-B1-4-1D",
-                                             "referencia":  "3716-009173",
-                                             "planta":  "1",
-                                             "dormitorios":  "3",
-                                             "banos":  "2",
-                                             "superficie":  "114",
-                                             "plano":  "https://drive.google.com/uc?export=view\u0026id=1ttafwRM2lqWnk5-NdxQ_LQyBGC1gFd7t",
-                                             "url":  "https://urbincasa.es/es/propiedad/3716-009173"
-                                         },
-                                         {
-                                             "codigo":  "121-B1-4-4E",
-                                             "referencia":  "3716-009189",
-                                             "planta":  "4",
-                                             "dormitorios":  "3",
-                                             "banos":  "2",
-                                             "superficie":  "112",
-                                             "plano":  "https://drive.google.com/uc?export=view\u0026id=1bXyuL40x71Y69hbJeqEV8jJ3v1j9GiWt",
-                                             "url":  "https://urbincasa.es/es/propiedad/3716-009189"
-                                         },
-                                         {
-                                             "codigo":  "121-B1-4-3E",
-                                             "referencia":  "3716-009184",
-                                             "planta":  "3",
-                                             "dormitorios":  "3",
-                                             "banos":  "2",
-                                             "superficie":  "107",
-                                             "plano":  "https://drive.google.com/uc?export=view\u0026id=1cqUxC7NGOFWWgJ1qfPD7Z68FjfFsbWt_",
-                                             "url":  "https://urbincasa.es/es/propiedad/3716-009184"
-                                         },
-                                         {
-                                             "codigo":  "121-B1-4-2E",
-                                             "referencia":  "3716-009179",
-                                             "planta":  "2",
-                                             "dormitorios":  "3",
-                                             "banos":  "2",
-                                             "superficie":  "107",
-                                             "plano":  "https://drive.google.com/uc?export=view\u0026id=1cqUxC7NGOFWWgJ1qfPD7Z68FjfFsbWt_",
-                                             "url":  "https://urbincasa.es/es/propiedad/3716-009179"
-                                         },
-                                         {
-                                             "codigo":  "121-B1-4-1E",
-                                             "referencia":  "3716-009174",
-                                             "planta":  "1",
-                                             "dormitorios":  "3",
-                                             "banos":  "2",
-                                             "superficie":  "107",
-                                             "plano":  "https://drive.google.com/uc?export=view\u0026id=1cqUxC7NGOFWWgJ1qfPD7Z68FjfFsbWt_",
-                                             "url":  "https://urbincasa.es/es/propiedad/3716-009174"
-                                         }
-                                     ]
-                   }
-               ],
-    "registros":  [
-                      {
-                          "fecha":  "2026-11-16T15:51:15",
-                          "fases":  [
-                                        {
-                                            "id":  "bloque1",
-                                            "nombre":  "Exterior 1",
-                                            "total":  23,
-                                            "disponibles":  0
-                                        },
-                                        {
-                                            "id":  "bloque2",
-                                            "nombre":  "Exterior 2",
-                                            "total":  18,
-                                            "disponibles":  2
-                                        },
-                                        {
-                                            "id":  "bloque3",
-                                            "nombre":  "Exterior 3",
-                                            "total":  12,
-                                            "disponibles":  2
-                                        },
-                                        {
-                                            "id":  "bloque4",
-                                            "nombre":  "Interior 1",
-                                            "total":  25,
-                                            "disponibles":  0
-                                        },
-                                        {
-                                            "id":  "bloque5",
-                                            "nombre":  "Interior 2",
-                                            "total":  30,
-                                            "disponibles":  13
-                                        },
-                                        {
-                                            "id":  "bloque7",
-                                            "nombre":  "Exterior 4",
-                                            "total":  39,
-                                            "disponibles":  38
-                                        }
-                                    ]
-                      }
-                  ],
-    "cambios":  [
-
-                ]
+  "ultimaLectura": "2026-11-16T16:30:00",
+  "ultimoError": null,
+  "actual": [
+    {
+      "id": "bloque1",
+      "nombre": "Exterior 1",
+      "total": 23,
+      "disponibles": 0,
+      "viviendas": []
+    },
+    {
+      "id": "bloque2",
+      "nombre": "Exterior 2",
+      "total": 18,
+      "disponibles": 2,
+      "viviendas": [
+        {
+          "codigo": "121-B1-2-2C",
+          "referencia": "3716-009010",
+          "planta": "2",
+          "dormitorios": "3",
+          "banos": "2",
+          "superficie": "105",
+          "plano": "https://drive.google.com/uc?export=view&id=1PvqL9hydKEPWRbFMqEBBFvHeeQjpLDTF",
+          "url": "https://urbincasa.es/es/propiedad/3716-009010"
+        },
+        {
+          "codigo": "121-B1-2-1C",
+          "referencia": "3716-009005",
+          "planta": "1",
+          "dormitorios": "3",
+          "banos": "2",
+          "superficie": "105",
+          "plano": "https://drive.google.com/uc?export=view&id=1PvqL9hydKEPWRbFMqEBBFvHeeQjpLDTF",
+          "url": "https://urbincasa.es/es/propiedad/3716-009005"
+        }
+      ]
+    },
+    {
+      "id": "bloque3",
+      "nombre": "Exterior 3",
+      "total": 12,
+      "disponibles": 2,
+      "viviendas": [
+        {
+          "codigo": "121-B1-3-1D",
+          "referencia": "3716-009028",
+          "planta": "1",
+          "dormitorios": "3",
+          "banos": "2",
+          "superficie": "121",
+          "plano": "https://drive.google.com/uc?export=view&id=12gqkEHTPAzqzB_7fX9JBHBOESU3UA802",
+          "url": "https://urbincasa.es/es/propiedad/3716-009028"
+        },
+        {
+          "codigo": "121-B1-3-1C",
+          "referencia": "3716-009027",
+          "planta": "1",
+          "dormitorios": "3",
+          "banos": "2",
+          "superficie": "98",
+          "plano": "https://drive.google.com/uc?export=view&id=1GRS8WBf_iu0cE1VRrBBRJNVzEpZd9-6Q",
+          "url": "https://urbincasa.es/es/propiedad/3716-009027"
+        }
+      ]
+    },
+    {
+      "id": "bloque4",
+      "nombre": "Interior 1",
+      "total": 25,
+      "disponibles": 0,
+      "viviendas": []
+    },
+    {
+      "id": "bloque5",
+      "nombre": "Interior 2",
+      "total": 30,
+      "disponibles": 13,
+      "viviendas": [
+        {
+          "codigo": "121-B1-4-1A",
+          "referencia": "3716-009170",
+          "planta": "1",
+          "dormitorios": "3",
+          "banos": "2",
+          "superficie": "113",
+          "plano": "https://drive.google.com/uc?export=view&id=1tFvFN0Lw8Idf-YoXbbwrcMbMCk879wsG",
+          "url": "https://urbincasa.es/es/propiedad/3716-009170"
+        },
+        {
+          "codigo": "121-B1-4-0A",
+          "referencia": "3716-009168",
+          "planta": "0",
+          "dormitorios": "3",
+          "banos": "2",
+          "superficie": "113",
+          "plano": "https://drive.google.com/uc?export=view&id=1plQFFSc7driyJ7uTnOYuX4AOjY1HCsYs",
+          "url": "https://urbincasa.es/es/propiedad/3716-009168"
+        },
+        {
+          "codigo": "121-B1-4-4B",
+          "referencia": "3716-009186",
+          "planta": "4",
+          "dormitorios": "3",
+          "banos": "2",
+          "superficie": "100",
+          "plano": "https://drive.google.com/uc?export=view&id=1Fillz8pa2RWNMMZxRRU_GDlaxgvxP-3C",
+          "url": "https://urbincasa.es/es/propiedad/3716-009186"
+        },
+        {
+          "codigo": "121-B1-4-1B",
+          "referencia": "3716-009171",
+          "planta": "1",
+          "dormitorios": "3",
+          "banos": "2",
+          "superficie": "112",
+          "plano": "https://drive.google.com/uc?export=view&id=1kTN-kN3ofgiePOXJq3cHMK4LzoRy2FAt",
+          "url": "https://urbincasa.es/es/propiedad/3716-009171"
+        },
+        {
+          "codigo": "121-B1-4-0B",
+          "referencia": "3716-009169",
+          "planta": "0",
+          "dormitorios": "3",
+          "banos": "2",
+          "superficie": "112",
+          "plano": "https://drive.google.com/uc?export=view&id=1ms__o169YLLJjB6gZzEgUz-XUjUud7vv",
+          "url": "https://urbincasa.es/es/propiedad/3716-009169"
+        },
+        {
+          "codigo": "121-B1-5-1A",
+          "referencia": "3716-009194",
+          "planta": "1",
+          "dormitorios": "3",
+          "banos": "2",
+          "superficie": "118",
+          "plano": "https://drive.google.com/uc?export=view&id=1JFZPlBBYd1S0WU-3ET8JsTEjNFIcp3Hz",
+          "url": "https://urbincasa.es/es/propiedad/3716-009194"
+        },
+        {
+          "codigo": "121-B1-5-4B",
+          "referencia": "3716-009210",
+          "planta": "4",
+          "dormitorios": "3",
+          "banos": "2",
+          "superficie": "100",
+          "plano": "https://drive.google.com/uc?export=view&id=1peT0UShLunHdGmqIuh9XyFahZnHJTZvR",
+          "url": "https://urbincasa.es/es/propiedad/3716-009210"
+        },
+        {
+          "codigo": "121-B1-5-1B",
+          "referencia": "3716-009195",
+          "planta": "1",
+          "dormitorios": "3",
+          "banos": "2",
+          "superficie": "112",
+          "plano": "https://drive.google.com/uc?export=view&id=1nPNjRGsBVd2p6VnMPr2JrQKYbxd5cy8E",
+          "url": "https://urbincasa.es/es/propiedad/3716-009195"
+        },
+        {
+          "codigo": "121-B1-5-0B",
+          "referencia": "3716-009191",
+          "planta": "0",
+          "dormitorios": "3",
+          "banos": "2",
+          "superficie": "112",
+          "plano": "https://drive.google.com/uc?export=view&id=18eSV9bL-QCqUWBwMK0_VJ2vShoSMVHHf",
+          "url": "https://urbincasa.es/es/propiedad/3716-009191"
+        },
+        {
+          "codigo": "121-B1-6-4A",
+          "referencia": "3716-009232",
+          "planta": "4",
+          "dormitorios": "3",
+          "banos": "2",
+          "superficie": "100",
+          "plano": "https://drive.google.com/uc?export=view&id=10-e5iKQH82O3rpsQ2zTkmYApuspu2gsR",
+          "url": "https://urbincasa.es/es/propiedad/3716-009232"
+        },
+        {
+          "codigo": "121-B1-6-0A",
+          "referencia": "3716-009214",
+          "planta": "0",
+          "dormitorios": "3",
+          "banos": "2",
+          "superficie": "112",
+          "plano": "https://drive.google.com/uc?export=view&id=1RFr1aQMEUVJk5Ewa1xirpwUQMtkf5jP2",
+          "url": "https://urbincasa.es/es/propiedad/3716-009214"
+        },
+        {
+          "codigo": "121-B1-6-4B",
+          "referencia": "3716-009233",
+          "planta": "4",
+          "dormitorios": "3",
+          "banos": "2",
+          "superficie": "106",
+          "plano": "https://drive.google.com/uc?export=view&id=1NlMHpX5jw5vomqwklIK8Az-yvnSnuBjw",
+          "url": "https://urbincasa.es/es/propiedad/3716-009233"
+        },
+        {
+          "codigo": "121-B1-6-1B",
+          "referencia": "3716-009218",
+          "planta": "1",
+          "dormitorios": "3",
+          "banos": "2",
+          "superficie": "118",
+          "plano": "https://drive.google.com/uc?export=view&id=1GUGA1duz4WgkFLitpDfUp2NsYcVoleQf",
+          "url": "https://urbincasa.es/es/propiedad/3716-009218"
+        }
+      ]
+    },
+    {
+      "id": "bloque7",
+      "nombre": "Exterior 4",
+      "total": 39,
+      "disponibles": 38,
+      "viviendas": [
+        {
+          "codigo": "121-B1-6-4C",
+          "referencia": "3716-009234",
+          "planta": "4",
+          "dormitorios": "2",
+          "banos": "2",
+          "superficie": "93",
+          "plano": "https://drive.google.com/uc?export=view&id=1tUpwB9XoDSk1Ylg7ooUF5kAoUBOcniMo",
+          "url": "https://urbincasa.es/es/propiedad/3716-009234"
+        },
+        {
+          "codigo": "121-B1-6-3C",
+          "referencia": "3716-009229",
+          "planta": "3",
+          "dormitorios": "2",
+          "banos": "2",
+          "superficie": "96",
+          "plano": "https://drive.google.com/uc?export=view&id=11FSwSr231bQHJwWTCjBEcZVbYwN75vCw",
+          "url": "https://urbincasa.es/es/propiedad/3716-009229"
+        },
+        {
+          "codigo": "121-B1-6-2C",
+          "referencia": "3716-009224",
+          "planta": "2",
+          "dormitorios": "2",
+          "banos": "2",
+          "superficie": "96",
+          "plano": "https://drive.google.com/uc?export=view&id=11FSwSr231bQHJwWTCjBEcZVbYwN75vCw",
+          "url": "https://urbincasa.es/es/propiedad/3716-009224"
+        },
+        {
+          "codigo": "121-B1-6-1C",
+          "referencia": "3716-009219",
+          "planta": "1",
+          "dormitorios": "2",
+          "banos": "2",
+          "superficie": "96",
+          "plano": "https://drive.google.com/uc?export=view&id=11FSwSr231bQHJwWTCjBEcZVbYwN75vCw",
+          "url": "https://urbincasa.es/es/propiedad/3716-009219"
+        },
+        {
+          "codigo": "121-B1-6-4D",
+          "referencia": "3716-009235",
+          "planta": "4",
+          "dormitorios": "2",
+          "banos": "2",
+          "superficie": "91",
+          "plano": "https://drive.google.com/uc?export=view&id=1ihq6xQuOBRumuAyxUmPH18r8DiJWFPmg",
+          "url": "https://urbincasa.es/es/propiedad/3716-009235"
+        },
+        {
+          "codigo": "121-B1-6-3D",
+          "referencia": "3716-009230",
+          "planta": "3",
+          "dormitorios": "2",
+          "banos": "2",
+          "superficie": "92",
+          "plano": "https://drive.google.com/uc?export=view&id=1X_ufFM59tlXNTTqmjiPLjZnf2heU5mUP",
+          "url": "https://urbincasa.es/es/propiedad/3716-009230"
+        },
+        {
+          "codigo": "121-B1-6-2D",
+          "referencia": "3716-009225",
+          "planta": "2",
+          "dormitorios": "2",
+          "banos": "2",
+          "superficie": "92",
+          "plano": "https://drive.google.com/uc?export=view&id=1X_ufFM59tlXNTTqmjiPLjZnf2heU5mUP",
+          "url": "https://urbincasa.es/es/propiedad/3716-009225"
+        },
+        {
+          "codigo": "121-B1-6-1D",
+          "referencia": "3716-009220",
+          "planta": "1",
+          "dormitorios": "2",
+          "banos": "2",
+          "superficie": "92",
+          "plano": "https://drive.google.com/uc?export=view&id=1X_ufFM59tlXNTTqmjiPLjZnf2heU5mUP",
+          "url": "https://urbincasa.es/es/propiedad/3716-009220"
+        },
+        {
+          "codigo": "121-B1-6-4E",
+          "referencia": "3716-009236",
+          "planta": "4",
+          "dormitorios": "2",
+          "banos": "2",
+          "superficie": "90",
+          "plano": "https://drive.google.com/uc?export=view&id=19zc5t50wfjzNcdww3pP1Lp_DTPHzuGQz",
+          "url": "https://urbincasa.es/es/propiedad/3716-009236"
+        },
+        {
+          "codigo": "121-B1-6-3E",
+          "referencia": "3716-009231",
+          "planta": "3",
+          "dormitorios": "2",
+          "banos": "2",
+          "superficie": "93",
+          "plano": "https://drive.google.com/uc?export=view&id=1XqiBbtI7Q9cA4yzUkaBECW73-rfw9CsF",
+          "url": "https://urbincasa.es/es/propiedad/3716-009231"
+        },
+        {
+          "codigo": "121-B1-6-2E",
+          "referencia": "3716-009226",
+          "planta": "2",
+          "dormitorios": "2",
+          "banos": "2",
+          "superficie": "93",
+          "plano": "https://drive.google.com/uc?export=view&id=1XqiBbtI7Q9cA4yzUkaBECW73-rfw9CsF",
+          "url": "https://urbincasa.es/es/propiedad/3716-009226"
+        },
+        {
+          "codigo": "121-B1-6-1E",
+          "referencia": "3716-009221",
+          "planta": "1",
+          "dormitorios": "2",
+          "banos": "2",
+          "superficie": "93",
+          "plano": "https://drive.google.com/uc?export=view&id=1XqiBbtI7Q9cA4yzUkaBECW73-rfw9CsF",
+          "url": "https://urbincasa.es/es/propiedad/3716-009221"
+        },
+        {
+          "codigo": "121-B1-5-4C",
+          "referencia": "3716-009211",
+          "planta": "4",
+          "dormitorios": "2",
+          "banos": "2",
+          "superficie": "90",
+          "plano": "https://drive.google.com/uc?export=view&id=1Wlh7UmU_RvQEqv6feSiN2PvndWfZbFPE",
+          "url": "https://urbincasa.es/es/propiedad/3716-009211"
+        },
+        {
+          "codigo": "121-B1-5-3C",
+          "referencia": "3716-009206",
+          "planta": "3",
+          "dormitorios": "2",
+          "banos": "2",
+          "superficie": "93",
+          "plano": "https://drive.google.com/uc?export=view&id=1XzAUXKptbj1KqLk2O-PYb9qsuEpyOXXy",
+          "url": "https://urbincasa.es/es/propiedad/3716-009206"
+        },
+        {
+          "codigo": "121-B1-5-2C",
+          "referencia": "3716-009201",
+          "planta": "2",
+          "dormitorios": "2",
+          "banos": "2",
+          "superficie": "93",
+          "plano": "https://drive.google.com/uc?export=view&id=1XzAUXKptbj1KqLk2O-PYb9qsuEpyOXXy",
+          "url": "https://urbincasa.es/es/propiedad/3716-009201"
+        },
+        {
+          "codigo": "121-B1-5-1C",
+          "referencia": "3716-009196",
+          "planta": "1",
+          "dormitorios": "2",
+          "banos": "2",
+          "superficie": "93",
+          "plano": "https://drive.google.com/uc?export=view&id=1XzAUXKptbj1KqLk2O-PYb9qsuEpyOXXy",
+          "url": "https://urbincasa.es/es/propiedad/3716-009196"
+        },
+        {
+          "codigo": "121-B1-5-0C",
+          "referencia": "3716-009192",
+          "planta": "0",
+          "dormitorios": "3",
+          "banos": "2",
+          "superficie": "130",
+          "plano": "https://drive.google.com/uc?export=view&id=1XI51ZOrLVPP4WDPxTC_OGRokAM1s7v6g",
+          "url": "https://urbincasa.es/es/propiedad/3716-009192"
+        },
+        {
+          "codigo": "121-B1-5-4D",
+          "referencia": "3716-009212",
+          "planta": "4",
+          "dormitorios": "2",
+          "banos": "2",
+          "superficie": "91",
+          "plano": "https://drive.google.com/uc?export=view&id=1xhEL1-2DyxOE8kQgGUVLMO2Vyb3z_-uK",
+          "url": "https://urbincasa.es/es/propiedad/3716-009212"
+        },
+        {
+          "codigo": "121-B1-5-3D",
+          "referencia": "3716-009207",
+          "planta": "3",
+          "dormitorios": "2",
+          "banos": "2",
+          "superficie": "92",
+          "plano": "https://drive.google.com/uc?export=view&id=1LrRrPNGqoorgB3KaXXljbl4lvCzQyYpz",
+          "url": "https://urbincasa.es/es/propiedad/3716-009207"
+        },
+        {
+          "codigo": "121-B1-5-2D",
+          "referencia": "3716-009202",
+          "planta": "2",
+          "dormitorios": "2",
+          "banos": "2",
+          "superficie": "92",
+          "plano": "https://drive.google.com/uc?export=view&id=1LrRrPNGqoorgB3KaXXljbl4lvCzQyYpz",
+          "url": "https://urbincasa.es/es/propiedad/3716-009202"
+        },
+        {
+          "codigo": "121-B1-5-1D",
+          "referencia": "3716-009197",
+          "planta": "1",
+          "dormitorios": "2",
+          "banos": "2",
+          "superficie": "92",
+          "plano": "https://drive.google.com/uc?export=view&id=1LrRrPNGqoorgB3KaXXljbl4lvCzQyYpz",
+          "url": "https://urbincasa.es/es/propiedad/3716-009197"
+        },
+        {
+          "codigo": "121-B1-5-4E",
+          "referencia": "3716-009213",
+          "planta": "4",
+          "dormitorios": "2",
+          "banos": "2",
+          "superficie": "95",
+          "plano": "https://drive.google.com/uc?export=view&id=1aJT582Htp-29WPyPpN4GbaJ01ypjYwjg",
+          "url": "https://urbincasa.es/es/propiedad/3716-009213"
+        },
+        {
+          "codigo": "121-B1-5-3E",
+          "referencia": "3716-009208",
+          "planta": "3",
+          "dormitorios": "2",
+          "banos": "2",
+          "superficie": "98",
+          "plano": "https://drive.google.com/uc?export=view&id=1PZ-c7THaAF-7skefvCrrgsct4nMOTj2N",
+          "url": "https://urbincasa.es/es/propiedad/3716-009208"
+        },
+        {
+          "codigo": "121-B1-5-2E",
+          "referencia": "3716-009203",
+          "planta": "2",
+          "dormitorios": "2",
+          "banos": "2",
+          "superficie": "98",
+          "plano": "https://drive.google.com/uc?export=view&id=1PZ-c7THaAF-7skefvCrrgsct4nMOTj2N",
+          "url": "https://urbincasa.es/es/propiedad/3716-009203"
+        },
+        {
+          "codigo": "121-B1-5-1E",
+          "referencia": "3716-009198",
+          "planta": "1",
+          "dormitorios": "2",
+          "banos": "2",
+          "superficie": "98",
+          "plano": "https://drive.google.com/uc?export=view&id=1PZ-c7THaAF-7skefvCrrgsct4nMOTj2N",
+          "url": "https://urbincasa.es/es/propiedad/3716-009198"
+        },
+        {
+          "codigo": "121-B1-5-0D",
+          "referencia": "3716-009193",
+          "planta": "0",
+          "dormitorios": "3",
+          "banos": "2",
+          "superficie": "139",
+          "plano": "https://drive.google.com/uc?export=view&id=1Ufy-W49zutaGdf9KFITrhb7n7NNfDUy_",
+          "url": "https://urbincasa.es/es/propiedad/3716-009193"
+        },
+        {
+          "codigo": "121-B1-4-4C",
+          "referencia": "3716-009187",
+          "planta": "4",
+          "dormitorios": "2",
+          "banos": "2",
+          "superficie": "89",
+          "plano": "https://drive.google.com/uc?export=view&id=1O1MY3mrZKwSCXrt9dG0WbCRWFCYFVLs_",
+          "url": "https://urbincasa.es/es/propiedad/3716-009187"
+        },
+        {
+          "codigo": "121-B1-4-3C",
+          "referencia": "3716-009182",
+          "planta": "3",
+          "dormitorios": "2",
+          "banos": "2",
+          "superficie": "92",
+          "plano": "https://drive.google.com/uc?export=view&id=1ZlRVVwQP416cnlA1N1CgDwxCuk1jyXxD",
+          "url": "https://urbincasa.es/es/propiedad/3716-009182"
+        },
+        {
+          "codigo": "121-B1-4-2C",
+          "referencia": "3716-009177",
+          "planta": "2",
+          "dormitorios": "2",
+          "banos": "2",
+          "superficie": "92",
+          "plano": "https://drive.google.com/uc?export=view&id=1ZlRVVwQP416cnlA1N1CgDwxCuk1jyXxD",
+          "url": "https://urbincasa.es/es/propiedad/3716-009177"
+        },
+        {
+          "codigo": "121-B1-4-1C",
+          "referencia": "3716-009172",
+          "planta": "1",
+          "dormitorios": "2",
+          "banos": "2",
+          "superficie": "92",
+          "plano": "https://drive.google.com/uc?export=view&id=1ZlRVVwQP416cnlA1N1CgDwxCuk1jyXxD",
+          "url": "https://urbincasa.es/es/propiedad/3716-009172"
+        },
+        {
+          "codigo": "121-B1-4-4D",
+          "referencia": "3716-009188",
+          "planta": "4",
+          "dormitorios": "3",
+          "banos": "2",
+          "superficie": "113",
+          "plano": "https://drive.google.com/uc?export=view&id=14v03rCtUh7JQ3sZpreXlrpp_seFxjeZE",
+          "url": "https://urbincasa.es/es/propiedad/3716-009188"
+        },
+        {
+          "codigo": "121-B1-4-3D",
+          "referencia": "3716-009183",
+          "planta": "3",
+          "dormitorios": "3",
+          "banos": "2",
+          "superficie": "114",
+          "plano": "https://drive.google.com/uc?export=view&id=1ttafwRM2lqWnk5-NdxQ_LQyBGC1gFd7t",
+          "url": "https://urbincasa.es/es/propiedad/3716-009183"
+        },
+        {
+          "codigo": "121-B1-4-2D",
+          "referencia": "3716-009178",
+          "planta": "2",
+          "dormitorios": "3",
+          "banos": "2",
+          "superficie": "114",
+          "plano": "https://drive.google.com/uc?export=view&id=1ttafwRM2lqWnk5-NdxQ_LQyBGC1gFd7t",
+          "url": "https://urbincasa.es/es/propiedad/3716-009178"
+        },
+        {
+          "codigo": "121-B1-4-1D",
+          "referencia": "3716-009173",
+          "planta": "1",
+          "dormitorios": "3",
+          "banos": "2",
+          "superficie": "114",
+          "plano": "https://drive.google.com/uc?export=view&id=1ttafwRM2lqWnk5-NdxQ_LQyBGC1gFd7t",
+          "url": "https://urbincasa.es/es/propiedad/3716-009173"
+        },
+        {
+          "codigo": "121-B1-4-4E",
+          "referencia": "3716-009189",
+          "planta": "4",
+          "dormitorios": "3",
+          "banos": "2",
+          "superficie": "112",
+          "plano": "https://drive.google.com/uc?export=view&id=1bXyuL40x71Y69hbJeqEV8jJ3v1j9GiWt",
+          "url": "https://urbincasa.es/es/propiedad/3716-009189"
+        },
+        {
+          "codigo": "121-B1-4-3E",
+          "referencia": "3716-009184",
+          "planta": "3",
+          "dormitorios": "3",
+          "banos": "2",
+          "superficie": "107",
+          "plano": "https://drive.google.com/uc?export=view&id=1cqUxC7NGOFWWgJ1qfPD7Z68FjfFsbWt_",
+          "url": "https://urbincasa.es/es/propiedad/3716-009184"
+        },
+        {
+          "codigo": "121-B1-4-2E",
+          "referencia": "3716-009179",
+          "planta": "2",
+          "dormitorios": "3",
+          "banos": "2",
+          "superficie": "107",
+          "plano": "https://drive.google.com/uc?export=view&id=1cqUxC7NGOFWWgJ1qfPD7Z68FjfFsbWt_",
+          "url": "https://urbincasa.es/es/propiedad/3716-009179"
+        },
+        {
+          "codigo": "121-B1-4-1E",
+          "referencia": "3716-009174",
+          "planta": "1",
+          "dormitorios": "3",
+          "banos": "2",
+          "superficie": "107",
+          "plano": "https://drive.google.com/uc?export=view&id=1cqUxC7NGOFWWgJ1qfPD7Z68FjfFsbWt_",
+          "url": "https://urbincasa.es/es/propiedad/3716-009174"
+        }
+      ]
+    }
+  ],
+  "registros": [
+    {
+      "fecha": "2026-11-16T15:51:15",
+      "fases": [
+        {
+          "id": "bloque1",
+          "nombre": "Exterior 1",
+          "total": 23,
+          "disponibles": 0
+        },
+        {
+          "id": "bloque2",
+          "nombre": "Exterior 2",
+          "total": 18,
+          "disponibles": 2
+        },
+        {
+          "id": "bloque3",
+          "nombre": "Exterior 3",
+          "total": 12,
+          "disponibles": 2
+        },
+        {
+          "id": "bloque4",
+          "nombre": "Interior 1",
+          "total": 25,
+          "disponibles": 0
+        },
+        {
+          "id": "bloque5",
+          "nombre": "Interior 2",
+          "total": 30,
+          "disponibles": 13
+        },
+        {
+          "id": "bloque7",
+          "nombre": "Exterior 4",
+          "total": 39,
+          "disponibles": 38
+        }
+      ]
+    }
+  ],
+  "cambios": []
 }
