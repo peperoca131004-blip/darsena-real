@@ -1,0 +1,221 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Dársena Real · Disponibilidad</title>
+<style>
+  :root {
+    --bg: #f6f5f2; --card: #ffffff; --ink: #1d1f22; --muted: #6b6f76; --line: #e5e3de;
+    --accent: #e0701c; --ok: #2f8f5b; --ok-soft: #e3f3ea; --sold: #c9ccd1; --warn: #b3261e;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root { color-scheme: dark; --bg: #151618; --card: #1f2124; --ink: #ececec; --muted: #9a9ea6; --line: #33363b;
+            --accent: #f08a3c; --ok: #4cc387; --ok-soft: #1d3328; --sold: #464a50; --warn: #f28b82; }
+  }
+  * { box-sizing: border-box; }
+  body { margin: 0; background: var(--bg); color: var(--ink);
+         font: 15px/1.45 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif; }
+  .wrap { max-width: 1120px; margin: 0 auto; padding: 24px 16px 48px; }
+  header { display: flex; flex-wrap: wrap; gap: 12px 24px; align-items: flex-end; justify-content: space-between; margin-bottom: 20px; }
+  .hero { margin: 0 0 20px; position: relative; border-radius: 14px; overflow: hidden; border: 1px solid var(--line); }
+  .hero img { display: block; width: 100%; aspect-ratio: 16 / 6; object-fit: cover; object-position: center 18%; }
+  .hero figcaption { position: absolute; left: 12px; bottom: 10px; font-size: 12px; color: #fff;
+                     background: rgba(0,0,0,.45); padding: 3px 10px; border-radius: 99px; }
+  .marca { display: flex; align-items: center; gap: 18px; flex-wrap: wrap; }
+  .logo { display: inline-flex; background: #fff; border-radius: 10px; padding: 6px 10px; border: 1px solid var(--line); }
+  .logo img { height: 40px; width: auto; display: block; }
+  h1 { margin: 0; font-size: 26px; letter-spacing: -0.01em; }
+  h1 small { display: block; font-size: 13px; font-weight: 500; color: var(--muted); letter-spacing: 0; }
+  h2 { font-size: 16px; margin: 32px 0 12px; }
+  a { color: var(--accent); }
+  .meta { color: var(--muted); font-size: 13px; text-align: right; }
+  button { font: inherit; border: 1px solid var(--line); background: var(--card); color: var(--ink);
+           border-radius: 8px; padding: 7px 14px; cursor: pointer; }
+  button:hover { border-color: var(--accent); }
+  button:disabled { opacity: .6; cursor: wait; }
+  .err { background: #fdecea; color: var(--warn); border-radius: 8px; padding: 10px 14px; margin-bottom: 16px; display: none; }
+  @media (prefers-color-scheme: dark) { .err { background: #3a1f1d; } }
+
+  .kpis { display: grid; grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); gap: 12px; }
+  .kpi { background: var(--card); border: 1px solid var(--line); border-radius: 12px; padding: 14px 16px; }
+  .kpi .v { font-size: 30px; font-weight: 700; font-variant-numeric: tabular-nums; }
+  .kpi .l { color: var(--muted); font-size: 13px; }
+  .kpi.hi .v { color: var(--ok); }
+
+  .fases { display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 12px; }
+  .fase { background: var(--card); border: 1px solid var(--line); border-radius: 12px; padding: 16px; }
+  .fase .top { display: flex; justify-content: space-between; align-items: baseline; gap: 8px; }
+  .fase .nom { font-weight: 650; font-size: 17px; }
+  .fase .num { font-variant-numeric: tabular-nums; color: var(--muted); }
+  .fase .num b { color: var(--ok); font-size: 22px; }
+  .fase.agotada .num b { color: var(--muted); }
+  .bar { height: 10px; border-radius: 99px; background: var(--sold); overflow: hidden; margin: 10px 0 6px; }
+  .bar > span { display: block; height: 100%; background: var(--ok); border-radius: 99px; }
+  .sub { font-size: 13px; color: var(--muted); }
+  .tag { display: inline-block; font-size: 12px; padding: 1px 8px; border-radius: 99px; background: var(--sold); color: var(--ink); }
+  .tag.ok { background: var(--ok-soft); color: var(--ok); }
+  details { margin-top: 10px; }
+  summary { cursor: pointer; font-size: 13px; color: var(--accent); }
+  table { width: 100%; border-collapse: collapse; font-size: 13px; margin-top: 8px; }
+  th, td { text-align: left; padding: 6px 4px; border-bottom: 1px solid var(--line); white-space: nowrap; }
+  th { color: var(--muted); font-weight: 500; }
+  td.n, th.n { text-align: right; font-variant-numeric: tabular-nums; }
+  .tbl-scroll { overflow-x: auto; }
+
+  .panel { background: var(--card); border: 1px solid var(--line); border-radius: 12px; padding: 16px; }
+  .chart svg { width: 100%; height: auto; display: block; }
+  .legend { display: flex; flex-wrap: wrap; gap: 6px 16px; font-size: 13px; color: var(--muted); margin-top: 8px; }
+  .legend i { display: inline-block; width: 10px; height: 10px; border-radius: 3px; margin-right: 6px; vertical-align: -1px; }
+  .empty { color: var(--muted); font-size: 14px; padding: 8px 0; }
+  ul.log { list-style: none; padding: 0; margin: 0; font-size: 14px; }
+  ul.log li { padding: 7px 0; border-bottom: 1px solid var(--line); display: flex; gap: 12px; flex-wrap: wrap; }
+  ul.log time { color: var(--muted); font-variant-numeric: tabular-nums; min-width: 130px; }
+  .baja { color: var(--warn); } .alta { color: var(--ok); }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <h1>Dársena Real <small>Disponibilidad de viviendas por fase · Cartagena</small></h1>
+    <div class="meta"><div id="ultima">Cargando…</div></div>
+  </header>
+  <figure class="hero">
+    <img src="foto.jpg" alt="Fachada del residencial Dársena Real">
+    <figcaption>Dársena Real · Imagen: urbincasa.es</figcaption>
+  </figure>
+  <div class="err" id="err"></div>
+
+  <section class="kpis" id="kpis"></section>
+
+  <h2>Fases</h2>
+  <section class="fases" id="fases"></section>
+
+  <h2>Evolución de viviendas disponibles</h2>
+  <section class="panel chart" id="chart"></section>
+
+  <h2>Cambios detectados</h2>
+  <section class="panel"><ul class="log" id="log"></ul></section>
+
+  <p class="sub" style="margin-top:24px">Seguimiento independiente, no es una página oficial de Urbincasa. Los datos se leen cada día del apartado de viviendas de <a id="fuente" href="https://urbincasa.es/es/promocion/darsena-real-1886" target="_blank" rel="noopener">la web de la promoción</a>; para información oficial y precios, consulta esa web.</p>
+</div>
+
+<script>
+const COLORES = ['#2f8f5b', '#e0701c', '#3b6fd4', '#a1449b', '#c79a14', '#1f9aa8', '#7a5c3e'];
+const $ = id => document.getElementById(id);
+const fmt = s => s ? new Date(s).toLocaleString('es-ES', { dateStyle: 'short', timeStyle: 'short' }) : '—';
+const esc = s => String(s ?? '').replace(/[&<>"]/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]));
+const arr = x => Array.isArray(x) ? x : (x ? [x] : []);
+
+// Versión publicada en GitHub Pages: los datos los escribe cada día GitHub Actions en datos/historial.json
+async function cargar() {
+  try {
+    const r = await fetch('datos/historial.json?t=' + Date.now(), { cache: 'no-store' });
+    if (!r.ok) throw new Error('respuesta ' + r.status);
+    const h = await r.json();
+    pintar({ actual: h.actual, registros: h.registros, cambios: h.cambios, ultimaLectura: h.ultimaLectura, ultimoError: h.ultimoError });
+  } catch (e) {
+    $('err').style.display = 'block';
+    $('err').textContent = 'No se pudieron cargar los datos (' + e.message + '). Prueba a recargar la página dentro de un rato.';
+  }
+}
+
+function pintar(d) {
+  $('ultima').textContent = 'Última lectura: ' + fmt(d.ultimaLectura) + ' · se actualiza cada día';
+  $('err').style.display = d.ultimoError ? 'block' : 'none';
+  if (d.ultimoError) $('err').textContent = 'Último intento fallido: ' + d.ultimoError;
+
+  const fases = arr(d.actual);
+  const total = fases.reduce((a, f) => a + f.total, 0);
+  const libres = fases.reduce((a, f) => a + f.disponibles, 0);
+  const vendidas = total - libres;
+  $('kpis').innerHTML = `
+    <div class="kpi hi"><div class="v">${libres}</div><div class="l">viviendas disponibles</div></div>
+    <div class="kpi"><div class="v">${total}</div><div class="l">viviendas totales</div></div>
+    <div class="kpi"><div class="v">${vendidas}</div><div class="l">no disponibles (vendidas/reservadas)</div></div>
+    <div class="kpi"><div class="v">${total ? Math.round(vendidas / total * 100) : 0}%</div><div class="l">comercializado</div></div>
+    <div class="kpi"><div class="v">${fases.filter(f => f.disponibles > 0).length}/${fases.length}</div><div class="l">fases con viviendas libres</div></div>`;
+
+  $('fases').innerHTML = fases.map(f => {
+    const pct = f.total ? f.disponibles / f.total * 100 : 0;
+    const viv = arr(f.viviendas);
+    const filas = viv.map(v => `<tr>
+        <td>${esc(v.codigo)}</td><td class="n">${esc(v.planta)}</td><td class="n">${esc(v.dormitorios)}</td>
+        <td class="n">${esc(v.banos)}</td><td class="n">${esc(v.superficie)} m²</td>
+        <td>${v.url ? `<a href="${esc(v.url)}" target="_blank" rel="noopener">ficha</a>` : ''}
+            ${v.plano ? ` · <a href="${esc(v.plano)}" target="_blank" rel="noopener">plano</a>` : ''}</td></tr>`).join('');
+    return `<article class="fase ${f.disponibles ? '' : 'agotada'}">
+      <div class="top"><span class="nom">${esc(f.nombre)}</span>
+        <span class="num"><b>${f.disponibles}</b> / ${f.total} libres</span></div>
+      <div class="bar" title="${f.disponibles} libres de ${f.total}"><span style="width:${pct}%"></span></div>
+      <div class="sub">${f.disponibles ? `<span class="tag ok">${Math.round(pct)}% libre</span>` : '<span class="tag">Agotada</span>'}
+        &nbsp;${f.total - f.disponibles} vendidas o reservadas</div>
+      ${viv.length ? `<details><summary>Ver ${viv.length} vivienda${viv.length > 1 ? 's' : ''} disponible${viv.length > 1 ? 's' : ''}</summary>
+        <div class="tbl-scroll"><table><thead><tr><th>Vivienda</th><th class="n">Planta</th><th class="n">Dorm.</th><th class="n">Baños</th><th class="n">Sup.</th><th></th></tr></thead>
+        <tbody>${filas}</tbody></table></div></details>` : ''}
+    </article>`;
+  }).join('');
+
+  pintarGrafico(arr(d.registros), fases, d.ultimaLectura);
+
+  const cambios = arr(d.cambios).slice().reverse();
+  $('log').innerHTML = cambios.length ? cambios.slice(0, 200).map(c => {
+    const baja = c.tipo.startsWith('ya no');
+    return `<li><time>${fmt(c.fecha)}</time><span><b>${esc(c.fase)}</b> ${esc(c.vivienda)}</span>
+      <span class="${baja ? 'baja' : 'alta'}">${esc(c.tipo)}</span></li>`;
+  }).join('') : '<li class="empty">Aún no hay cambios. Aparecerán aquí cuando una vivienda se venda/reserve o vuelva a estar libre.</li>';
+}
+
+function pintarGrafico(regs, fases, ultima) {
+  if (!regs.length) { $('chart').innerHTML = '<div class="empty">Sin datos todavía.</div>'; return; }
+  // Puntos: cada registro + la última lectura (para que la línea llegue hasta hoy)
+  const pts = regs.map(r => ({ t: new Date(r.fecha).getTime(), fases: arr(r.fases) }));
+  const tFin = Math.max(new Date(ultima || Date.now()).getTime(), pts[pts.length - 1].t);
+  pts.push({ t: tFin, fases: pts[pts.length - 1].fases });
+
+  const W = 1000, H = 300, L = 40, R = 16, T = 12, B = 32;
+  const t0 = pts[0].t, t1 = Math.max(tFin, t0 + 3600e3);
+  const maxV = Math.max(1, ...pts.flatMap(p => p.fases.map(f => f.disponibles)));
+  const x = t => L + (t - t0) / (t1 - t0) * (W - L - R);
+  const y = v => T + (1 - v / maxV) * (H - T - B);
+
+  let g = '';
+  const paso = Math.max(1, Math.ceil(maxV / 5));
+  for (let v = 0; v <= maxV; v += paso)
+    g += `<line x1="${L}" x2="${W - R}" y1="${y(v)}" y2="${y(v)}" stroke="var(--line)"/>
+          <text x="${L - 8}" y="${y(v) + 4}" text-anchor="end" font-size="12" fill="var(--muted)">${v}</text>`;
+  g += `<text x="${L}" y="${H - 8}" font-size="12" fill="var(--muted)">${fmt(new Date(t0).toISOString())}</text>
+        <text x="${W - R}" y="${H - 8}" font-size="12" text-anchor="end" fill="var(--muted)">${fmt(new Date(t1).toISOString())}</text>`;
+
+  const lineas = fases.map((f, i) => {
+    const c = COLORES[i % COLORES.length];
+    let dPath = '', prev = null;
+    pts.forEach((p, k) => {
+      const v = (p.fases.find(q => q.id === f.id) || {}).disponibles ?? 0;
+      const X = x(p.t), Y = y(v);
+      dPath += k === 0 ? `M${X},${Y}` : `H${X}V${Y}`; // escalonado: el valor se mantiene hasta el siguiente cambio
+      prev = v;
+    });
+    const ult = pts[pts.length - 1];
+    return `<path d="${dPath}" fill="none" stroke="${c}" stroke-width="2.5" stroke-linejoin="round"><title>${esc(f.nombre)}</title></path>
+      <circle cx="${x(ult.t)}" cy="${y(prev)}" r="4" fill="${c}"><title>${esc(f.nombre)}: ${prev}</title></circle>`;
+  }).join('');
+
+  const nota = regs.length === 1 ? '<div class="sub" style="margin-top:6px">Solo hay una lectura con estos números; la línea se irá dibujando a medida que cambie la disponibilidad.</div>' : '';
+  $('chart').innerHTML = `<svg viewBox="0 0 ${W} ${H}" role="img" aria-label="Viviendas disponibles por fase a lo largo del tiempo">${g}${lineas}</svg>
+    <div class="legend">${fases.map((f, i) => `<span><i style="background:${COLORES[i % COLORES.length]}"></i>${esc(f.nombre)} (${f.disponibles})</span>`).join('')}</div>${nota}`;
+}
+
+if (!/^https?:$/.test(location.protocol)) {
+  // Abierto desde el disco o en una vista previa: no se puede leer datos/historial.json
+  $('ultima').textContent = '';
+  $('err').style.display = 'block';
+  $('err').innerHTML = 'Esta es la versión para GitHub Pages: los datos solo se cargan cuando la página está publicada en GitHub. ' +
+    'Para verla en tu ordenador, usa <b>Iniciar.bat</b> en la carpeta DarsenaTracker.';
+} else {
+  cargar();
+  setInterval(cargar, 10 * 60 * 1000); // vuelve a mirar los datos cada 10 minutos
+}
+</script>
+</body>
+</html>
