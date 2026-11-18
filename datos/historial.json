@@ -1,5 +1,5 @@
 {
-  "ultimaLectura": "2026-11-17T09:28:25",
+  "ultimaLectura": "2026-11-18T09:29:04",
   "ultimoError": null,
   "actual": [
     {
@@ -214,7 +214,7 @@
       "id": "bloque7",
       "nombre": "Exterior 4",
       "total": 39,
-      "disponibles": 38,
+      "disponibles": 37,
       "viviendas": [
         {
           "codigo": "121-B1-6-4C",
@@ -395,16 +395,6 @@
           "superficie": "91",
           "plano": "https://drive.google.com/uc?export=view&id=1xhEL1-2DyxOE8kQgGUVLMO2Vyb3z_-uK",
           "url": "https://urbincasa.es/es/propiedad/3716-009212"
-        },
-        {
-          "codigo": "121-B1-5-3D",
-          "referencia": "3716-009207",
-          "planta": "3",
-          "dormitorios": "2",
-          "banos": "2",
-          "superficie": "92",
-          "plano": "https://drive.google.com/uc?export=view&id=1LrRrPNGqoorgB3KaXXljbl4lvCzQyYpz",
-          "url": "https://urbincasa.es/es/propiedad/3716-009207"
         },
         {
           "codigo": "121-B1-5-2D",
@@ -640,7 +630,55 @@
           "disponibles": 38
         }
       ]
+    },
+    {
+      "fecha": "2026-11-18T09:29:04",
+      "fases": [
+        {
+          "id": "bloque1",
+          "nombre": "Exterior 1",
+          "total": 23,
+          "disponibles": 0
+        },
+        {
+          "id": "bloque2",
+          "nombre": "Exterior 2",
+          "total": 18,
+          "disponibles": 2
+        },
+        {
+          "id": "bloque3",
+          "nombre": "Exterior 3",
+          "total": 12,
+          "disponibles": 2
+        },
+        {
+          "id": "bloque4",
+          "nombre": "Interior 1",
+          "total": 25,
+          "disponibles": 0
+        },
+        {
+          "id": "bloque5",
+          "nombre": "Interior 2",
+          "total": 30,
+          "disponibles": 13
+        },
+        {
+          "id": "bloque7",
+          "nombre": "Exterior 4",
+          "total": 39,
+          "disponibles": 37
+        }
+      ]
     }
   ],
-  "cambios": []
+  "cambios": [
+    {
+      "fecha": "2026-11-18T09:29:04",
+      "fase": "Exterior 4",
+      "vivienda": "121-B1-5-3D",
+      "tipo": "ya no disponible"
+    }
+  ]
 }
