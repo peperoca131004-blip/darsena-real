@@ -6,16 +6,27 @@
 <title>Dársena Real · Disponibilidad</title>
 <style>
   :root {
-    --bg: #f6f5f2; --card: #ffffff; --ink: #1d1f22; --muted: #6b6f76; --line: #e5e3de;
-    --accent: #e0701c; --ok: #2f8f5b; --ok-soft: #e3f3ea; --sold: #c9ccd1; --warn: #b3261e;
+    --bg: #eef1f5; --card: rgba(255,255,255,.55); --ink: #1d1f22; --muted: #5d6169; --line: rgba(255,255,255,.75);
+    --accent: #e0701c; --ok: #2f8f5b; --ok-soft: rgba(47,143,91,.14); --sold: rgba(120,126,136,.28); --warn: #b3261e;
+    --blob1: #ffd2a8; --blob2: #a8d8ff; --blob3: #b8f0cf; --shadow: 0 8px 32px rgba(31,38,60,.10);
   }
   @media (prefers-color-scheme: dark) {
-    :root { color-scheme: dark; --bg: #151618; --card: #1f2124; --ink: #ececec; --muted: #9a9ea6; --line: #33363b;
-            --accent: #f08a3c; --ok: #4cc387; --ok-soft: #1d3328; --sold: #464a50; --warn: #f28b82; }
+    :root { color-scheme: dark; --bg: #0f1114; --card: rgba(30,33,38,.55); --ink: #ececec; --muted: #a3a7af; --line: rgba(255,255,255,.12);
+            --accent: #f08a3c; --ok: #4cc387; --ok-soft: rgba(76,195,135,.16); --sold: rgba(255,255,255,.14); --warn: #f28b82;
+            --blob1: #6b3410; --blob2: #123f66; --blob3: #134a30; --shadow: 0 8px 32px rgba(0,0,0,.35); }
   }
   * { box-sizing: border-box; }
-  body { margin: 0; background: var(--bg); color: var(--ink);
+  body { margin: 0; min-height: 100vh; color: var(--ink);
+         background:
+           radial-gradient(40vmax 40vmax at 8% 10%, var(--blob1), transparent 70%),
+           radial-gradient(45vmax 45vmax at 95% 25%, var(--blob2), transparent 70%),
+           radial-gradient(40vmax 40vmax at 40% 100%, var(--blob3), transparent 70%),
+           var(--bg);
+         background-attachment: fixed;
          font: 15px/1.45 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif; }
+  .kpi, .fase, .panel, button {
+    -webkit-backdrop-filter: blur(18px) saturate(160%); backdrop-filter: blur(18px) saturate(160%);
+    box-shadow: var(--shadow); }
   .wrap { max-width: 1120px; margin: 0 auto; padding: 24px 16px 48px; }
   header { display: flex; flex-wrap: wrap; gap: 12px 24px; align-items: flex-end; justify-content: space-between; margin-bottom: 20px; }
   .hero { margin: 0 0 20px; position: relative; border-radius: 14px; overflow: hidden; border: 1px solid var(--line); }
