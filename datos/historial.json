@@ -1,5 +1,5 @@
 {
-  "ultimaLectura": "2026-11-24T09:36:37",
+  "ultimaLectura": "2026-11-25T09:41:26",
   "ultimoError": null,
   "actual": [
     {
@@ -194,7 +194,7 @@
       "id": "bloque7",
       "nombre": "Exterior 4",
       "total": 39,
-      "disponibles": 37,
+      "disponibles": 34,
       "viviendas": [
         {
           "codigo": "121-B1-6-4C",
@@ -287,16 +287,6 @@
           "url": "https://urbincasa.es/es/propiedad/3716-009236"
         },
         {
-          "codigo": "121-B1-6-3E",
-          "referencia": "3716-009231",
-          "planta": "3",
-          "dormitorios": "2",
-          "banos": "2",
-          "superficie": "93",
-          "plano": "https://drive.google.com/uc?export=view&id=1XqiBbtI7Q9cA4yzUkaBECW73-rfw9CsF",
-          "url": "https://urbincasa.es/es/propiedad/3716-009231"
-        },
-        {
           "codigo": "121-B1-6-2E",
           "referencia": "3716-009226",
           "planta": "2",
@@ -325,16 +315,6 @@
           "superficie": "90",
           "plano": "https://drive.google.com/uc?export=view&id=1Wlh7UmU_RvQEqv6feSiN2PvndWfZbFPE",
           "url": "https://urbincasa.es/es/propiedad/3716-009211"
-        },
-        {
-          "codigo": "121-B1-5-3C",
-          "referencia": "3716-009206",
-          "planta": "3",
-          "dormitorios": "2",
-          "banos": "2",
-          "superficie": "93",
-          "plano": "https://drive.google.com/uc?export=view&id=1XzAUXKptbj1KqLk2O-PYb9qsuEpyOXXy",
-          "url": "https://urbincasa.es/es/propiedad/3716-009206"
         },
         {
           "codigo": "121-B1-5-2C",
@@ -537,16 +517,6 @@
           "url": "https://urbincasa.es/es/propiedad/3716-009189"
         },
         {
-          "codigo": "121-B1-4-3E",
-          "referencia": "3716-009184",
-          "planta": "3",
-          "dormitorios": "3",
-          "banos": "2",
-          "superficie": "107",
-          "plano": "https://drive.google.com/uc?export=view&id=1cqUxC7NGOFWWgJ1qfPD7Z68FjfFsbWt_",
-          "url": "https://urbincasa.es/es/propiedad/3716-009184"
-        },
-        {
           "codigo": "121-B1-4-2E",
           "referencia": "3716-009179",
           "planta": "2",
@@ -692,6 +662,47 @@
           "disponibles": 37
         }
       ]
+    },
+    {
+      "fecha": "2026-11-25T09:41:26",
+      "fases": [
+        {
+          "id": "bloque1",
+          "nombre": "Exterior 1",
+          "total": 23,
+          "disponibles": 0
+        },
+        {
+          "id": "bloque2",
+          "nombre": "Exterior 2",
+          "total": 18,
+          "disponibles": 2
+        },
+        {
+          "id": "bloque3",
+          "nombre": "Exterior 3",
+          "total": 12,
+          "disponibles": 2
+        },
+        {
+          "id": "bloque4",
+          "nombre": "Interior 1",
+          "total": 25,
+          "disponibles": 0
+        },
+        {
+          "id": "bloque5",
+          "nombre": "Interior 2",
+          "total": 30,
+          "disponibles": 11
+        },
+        {
+          "id": "bloque7",
+          "nombre": "Exterior 4",
+          "total": 39,
+          "disponibles": 34
+        }
+      ]
     }
   ],
   "cambios": [
@@ -711,6 +722,24 @@
       "fecha": "2026-11-19T09:32:39",
       "fase": "Interior 2",
       "vivienda": "121-B1-5-1B",
+      "tipo": "ya no disponible"
+    },
+    {
+      "fecha": "2026-11-25T09:41:26",
+      "fase": "Exterior 4",
+      "vivienda": "121-B1-6-3E",
+      "tipo": "ya no disponible"
+    },
+    {
+      "fecha": "2026-11-25T09:41:26",
+      "fase": "Exterior 4",
+      "vivienda": "121-B1-5-3C",
+      "tipo": "ya no disponible"
+    },
+    {
+      "fecha": "2026-11-25T09:41:26",
+      "fase": "Exterior 4",
+      "vivienda": "121-B1-4-3E",
       "tipo": "ya no disponible"
     }
   ]
