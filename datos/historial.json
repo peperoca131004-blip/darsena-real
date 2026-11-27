@@ -1,5 +1,5 @@
 {
-  "ultimaLectura": "2026-11-26T09:38:35",
+  "ultimaLectura": "2026-11-27T09:37:50",
   "ultimoError": null,
   "actual": [
     {
@@ -194,7 +194,7 @@
       "id": "bloque7",
       "nombre": "Exterior 4",
       "total": 39,
-      "disponibles": 34,
+      "disponibles": 32,
       "viviendas": [
         {
           "codigo": "121-B1-6-4C",
@@ -215,16 +215,6 @@
           "superficie": "96",
           "plano": "https://drive.google.com/uc?export=view&id=11FSwSr231bQHJwWTCjBEcZVbYwN75vCw",
           "url": "https://urbincasa.es/es/propiedad/3716-009229"
-        },
-        {
-          "codigo": "121-B1-6-2C",
-          "referencia": "3716-009224",
-          "planta": "2",
-          "dormitorios": "2",
-          "banos": "2",
-          "superficie": "96",
-          "plano": "https://drive.google.com/uc?export=view&id=11FSwSr231bQHJwWTCjBEcZVbYwN75vCw",
-          "url": "https://urbincasa.es/es/propiedad/3716-009224"
         },
         {
           "codigo": "121-B1-6-1C",
@@ -455,16 +445,6 @@
           "superficie": "92",
           "plano": "https://drive.google.com/uc?export=view&id=1ZlRVVwQP416cnlA1N1CgDwxCuk1jyXxD",
           "url": "https://urbincasa.es/es/propiedad/3716-009177"
-        },
-        {
-          "codigo": "121-B1-4-1C",
-          "referencia": "3716-009172",
-          "planta": "1",
-          "dormitorios": "2",
-          "banos": "2",
-          "superficie": "92",
-          "plano": "https://drive.google.com/uc?export=view&id=1ZlRVVwQP416cnlA1N1CgDwxCuk1jyXxD",
-          "url": "https://urbincasa.es/es/propiedad/3716-009172"
         },
         {
           "codigo": "121-B1-4-4D",
@@ -703,6 +683,47 @@
           "disponibles": 34
         }
       ]
+    },
+    {
+      "fecha": "2026-11-27T09:37:50",
+      "fases": [
+        {
+          "id": "bloque1",
+          "nombre": "Exterior 1",
+          "total": 23,
+          "disponibles": 0
+        },
+        {
+          "id": "bloque2",
+          "nombre": "Exterior 2",
+          "total": 18,
+          "disponibles": 2
+        },
+        {
+          "id": "bloque3",
+          "nombre": "Exterior 3",
+          "total": 12,
+          "disponibles": 2
+        },
+        {
+          "id": "bloque4",
+          "nombre": "Interior 1",
+          "total": 25,
+          "disponibles": 0
+        },
+        {
+          "id": "bloque5",
+          "nombre": "Interior 2",
+          "total": 30,
+          "disponibles": 11
+        },
+        {
+          "id": "bloque7",
+          "nombre": "Exterior 4",
+          "total": 39,
+          "disponibles": 32
+        }
+      ]
     }
   ],
   "cambios": [
@@ -740,6 +761,18 @@
       "fecha": "2026-11-25T09:41:26",
       "fase": "Exterior 4",
       "vivienda": "121-B1-4-3E",
+      "tipo": "ya no disponible"
+    },
+    {
+      "fecha": "2026-11-27T09:37:50",
+      "fase": "Exterior 4",
+      "vivienda": "121-B1-6-2C",
+      "tipo": "ya no disponible"
+    },
+    {
+      "fecha": "2026-11-27T09:37:50",
+      "fase": "Exterior 4",
+      "vivienda": "121-B1-4-1C",
       "tipo": "ya no disponible"
     }
   ]
